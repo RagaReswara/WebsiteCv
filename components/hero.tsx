@@ -78,7 +78,7 @@ export default function Hero() {
       <div ref={bgRef} className="absolute inset-0 -top-10 -bottom-10">
         <Image
           src="/images/hero-bg.jpg"
-          alt="Struktur rangka atap baja"
+          alt="Proyek pengaspalan jalan"
           fill
           className="object-cover"
           priority
@@ -93,7 +93,7 @@ export default function Hero() {
           <div ref={badgeRef} className="mb-6 opacity-0">
             <span className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-4 py-1.5 text-xs font-semibold uppercase tracking-wider text-white backdrop-blur-sm">
               <span className="h-1.5 w-1.5 rounded-full bg-brand-orange" />
-              Kontraktor Truss Baja Profesional
+              Kontraktor Aspal Profesional
             </span>
           </div>
 
@@ -103,7 +103,7 @@ export default function Hero() {
             className="text-balance text-4xl font-extrabold leading-tight tracking-tight text-white opacity-0 sm:text-5xl lg:text-6xl"
             style={{ fontFamily: 'var(--font-heading)' }}
           >
-            Kontraktor Truss Baja{' '}
+            Kontraktor Aspal{' '}
             <span className="text-brand-orange">Terpercaya</span> di
             Yogyakarta
           </h1>
@@ -113,7 +113,7 @@ export default function Hero() {
             ref={subRef}
             className="mt-6 max-w-xl text-lg leading-relaxed text-slate-300 opacity-0"
           >
-            {'Desain \u2022 Fabrikasi \u2022 Instalasi Cepat & Kuat. Mitra terbaik Anda untuk rangka atap baja berkualitas tinggi di Sleman dan seluruh DIY.'}
+            {'Pengaspalan \u2022 Konstruksi \u2022 Pemeliharaan Jalan. Mitra terpercaya Anda untuk proyek aspal berkualitas tinggi di Sleman dan seluruh DIY.'}
           </p>
 
           {/* CTA */}

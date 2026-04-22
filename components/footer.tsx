@@ -17,12 +17,12 @@ const navLinks = [
 ]
 
 const serviceLinks = [
-  'Truss Baja Atap',
-  'Truss Galvanis',
-  'Desain & Engineering',
-  'Fabrikasi Custom',
-  'Instalasi Profesional',
-  'Maintenance',
+  'Pengaspalan Jalan',
+  'Konstruksi Infrastruktur',
+  'Survey & Perencanaan',
+  'Area Parkir & Halaman',
+  'Pemeliharaan Jalan',
+  'Konstruksi Baja (Sampingan)',
 ]
 
 export default function Footer() {
@@ -76,9 +76,9 @@ export default function Footer() {
               </span> */}
             </div>
             <p className="mt-4 max-w-xs text-sm leading-relaxed text-slate-400">
-              Kontraktor truss baja terpercaya di Sleman, Yogyakarta. Spesialis
-              desain, fabrikasi, dan instalasi rangka atap baja berkualitas
-              tinggi.
+              Kontraktor aspal terpercaya di Sleman, Yogyakarta. Spesialis
+              pengaspalan jalan, konstruksi infrastruktur, dan pemeliharaan
+              jalan berkualitas tinggi.
             </p>
           </div>
 

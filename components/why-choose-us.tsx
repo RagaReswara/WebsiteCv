@@ -12,25 +12,25 @@ const benefits = [
     icon: ShieldCheck,
     title: 'Material Berkualitas',
     description:
-      'Kami hanya menggunakan baja grade terbaik dengan sertifikasi SNI untuk kekuatan dan keawetan maksimal.',
+      'Kami hanya menggunakan material aspal grade terbaik dengan standar SNI untuk daya tahan dan kerataan permukaan maksimal.',
   },
   {
     icon: Clock,
     title: 'Pengerjaan Cepat',
     description:
-      'Proses fabrikasi efisien dan instalasi terorganisir memastikan proyek Anda selesai tepat waktu.',
+      'Proses mobilisasi alat berat dan pengerjaan terorganisir memastikan proyek aspal Anda selesai tepat waktu.',
   },
   {
     icon: BadgeCheck,
     title: 'Garansi Resmi',
     description:
-      'Setiap proyek dilengkapi garansi resmi atas kualitas material dan pengerjaan untuk ketenangan Anda.',
+      'Setiap proyek dilengkapi garansi resmi atas kualitas material aspal dan pengerjaan untuk ketenangan Anda.',
   },
   {
     icon: Headphones,
     title: 'Layanan Responsif',
     description:
-      'Tim kami siap melayani konsultasi, survey, hingga after-sales support dengan respons cepat.',
+      'Tim kami siap melayani konsultasi, survey lokasi, hingga after-sales support dengan respons cepat.',
   },
 ]
 
@@ -103,11 +103,11 @@ export default function WhyChooseUs() {
             className="mt-3 text-balance text-3xl font-extrabold tracking-tight text-black sm:text-4xl"
             style={{ fontFamily: 'var(--font-heading)' }}
           >
-            Mengapa Memilih Efata Jaya Truss?
+            Mengapa Memilih Efata Jaya?
           </h2>
           <p className="mt-4 text-pretty text-base leading-relaxed text-slate-400">
             Kami berkomitmen memberikan yang terbaik dalam setiap aspek layanan
-            konstruksi truss baja.
+            konstruksi aspal dan infrastruktur jalan.
           </p>
         </div>
 

@@ -1,4 +1,4 @@
-export const categories = ['All', 'Aspal', 'Baja Ringan', 'Talud', 'Bahu Jalan'] as const
+export const categories = ['All', 'Aspal', 'Kontraktor Aspal', 'Talud', 'Bahu Jalan'] as const
 
 export type Category = (typeof categories)[number]
 
@@ -21,10 +21,10 @@ export const projects: Project[] = [
   },
   {
     src: '/images/project-2.jpg',
-    alt: 'Konstruksi baja ringan atap',
-    label: 'Konstruksi Baja Ringan',
-    category: 'Baja Ringan',
-    type: 'Baja Ringan / Portofolio',
+    alt: 'Kontraktor aspal jalan',
+    label: 'Kontraktor Aspal',
+    category: 'Kontraktor Aspal',
+    type: 'Kontraktor Aspal / Portofolio',
   },
   {
     src: '/images/project-3.jpg',
@@ -49,10 +49,10 @@ export const projects: Project[] = [
   },
   {
     src: '/images/project-6.jpg',
-    alt: 'Pemasangan rangka baja ringan',
-    label: 'Rangka Atap Baja Ringan',
-    category: 'Baja Ringan',
-    type: 'Baja Ringan / Portofolio',
+    alt: 'Pekerjaan kontraktor aspal',
+    label: 'Pekerjaan Kontraktor Aspal',
+    category: 'Kontraktor Aspal',
+    type: 'Kontraktor Aspal / Portofolio',
   },
 ]
 
@@ -67,13 +67,13 @@ export const galleryData: Record<Exclude<Category, 'All'>, { title: string; desc
       { src: '/images/project-7.jpg', alt: 'Proyek aspal jalan desa' },
     ],
   },
-  'Baja Ringan': {
-    title: 'Proyek Baja Ringan',
-    description: 'Dokumentasi proyek konstruksi dan pemasangan rangka baja ringan untuk atap rumah, gedung, dan bangunan komersial.',
+  'Kontraktor Aspal': {
+    title: 'Proyek Kontraktor Aspal',
+    description: 'Dokumentasi proyek kontraktor aspal untuk jalan raya, area parkir, dan infrastruktur lainnya yang telah kami kerjakan.',
     images: [
-      { src: '/images/project-2.jpg', alt: 'Konstruksi baja ringan atap' },
-      { src: '/images/project-6.jpg', alt: 'Pemasangan rangka baja ringan' },
-      { src: '/images/project-8.jpg', alt: 'Rangka baja ringan gudang' },
+      { src: '/images/project-2.jpg', alt: 'Kontraktor aspal jalan raya' },
+      { src: '/images/project-6.jpg', alt: 'Pekerjaan kontraktor aspal' },
+      { src: '/images/project-8.jpg', alt: 'Kontraktor aspal area gudang' },
     ],
   },
   Talud: {
@@ -103,7 +103,7 @@ export function categoryToSlug(category: string): string {
 export function slugToCategory(slug: string): Exclude<Category, 'All'> | null {
   const map: Record<string, Exclude<Category, 'All'>> = {
     aspal: 'Aspal',
-    'baja-ringan': 'Baja Ringan',
+    'kontraktor-aspal': 'Kontraktor Aspal',
     talud: 'Talud',
     'bahu-jalan': 'Bahu Jalan',
   }

@@ -12,35 +12,35 @@ const testimonials = [
     name: 'Bapak Hendra Wijaya',
     role: 'Kontraktor Perumahan',
     content:
-      'Kerjasama dengan Efata Jaya Truss sangat memuaskan. Truss baja yang dipasang presisi, tepat waktu, dan timnya sangat profesional. Sudah 3 proyek perumahan kami percayakan kepada mereka.',
+      'Kerjasama dengan Efata Jaya sangat memuaskan. Pengaspalan jalan kompleks perumahan kami dikerjakan rapi, tepat waktu, dan timnya sangat profesional. Sudah 3 proyek kami percayakan kepada mereka.',
     rating: 5,
   },
   {
     name: 'Ibu Ratna Sari',
-    role: 'Developer Properti',
+    role: 'Kepala Desa Trimulyo',
     content:
-      'Untuk proyek cluster premium kami di Sleman, Efata Jaya memberikan kualitas truss yang luar biasa. Desainnya kuat, rapih, dan harganya sangat kompetitif dibanding kompetitor.',
+      'Jalan desa kami yang sudah lama rusak akhirnya diperbaiki dengan kualitas aspal yang luar biasa. Efata Jaya mengerjakan dengan cepat dan hasilnya sangat memuaskan warga.',
     rating: 5,
   },
   {
     name: 'Bapak Agus Prasetyo',
-    role: 'Pemilik Rumah Mewah',
+    role: 'Pemilik Pabrik',
     content:
-      'Rumah saya punya desain atap yang cukup kompleks, tapi tim Efata Jaya mampu mewujudkannya dengan sempurna. Hasilnya sangat rapi dan kokoh. Sangat direkomendasikan!',
+      'Area parkir dan halaman pabrik kami diaspal oleh Efata Jaya. Hasilnya sangat rata, kuat, dan estetis. Tim mereka bekerja profesional dan tidak mengganggu operasional pabrik.',
     rating: 5,
   },
   {
     name: 'Bapak Surya Dharma',
     role: 'Kontraktor Komersial',
     content:
-      'Proyek gudang kami membutuhkan bentang lebar tanpa tiang penyangga. Efata Jaya mendesain dan menginstalasi truss baja yang presisi. Hasil akhirnya sangat memuaskan.',
+      'Proyek pengaspalan kawasan industri kami membutuhkan kualitas tinggi dan waktu cepat. Efata Jaya menyelesaikannya dengan sangat memuaskan. Akan terus kami rekomendasikan.',
     rating: 5,
   },
   {
     name: 'Ibu Dewi Anggraini',
-    role: 'Arsitek Independen',
+    role: 'Konsultan Infrastruktur',
     content:
-      'Sebagai arsitek, saya butuh partner yang bisa mengeksekusi desain dengan akurat. Efata Jaya Truss selalu memenuhi ekspektasi saya dalam setiap proyek yang kami kerjakan bersama.',
+      'Sebagai konsultan, saya butuh partner kontraktor yang bisa memenuhi spesifikasi teknis. Efata Jaya selalu memenuhi standar dalam setiap proyek aspal yang kami tangani bersama.',
     rating: 5,
   },
 ]

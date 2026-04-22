@@ -4,7 +4,7 @@ import { useEffect, useRef } from 'react'
 import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import Image from 'next/image'
-import { MapPin, Award, Users, Target } from 'lucide-react'
+import { MapPin, Award, Users, Target, CheckCircle } from 'lucide-react'
 
 gsap.registerPlugin(ScrollTrigger)
 
@@ -12,7 +12,7 @@ const highlights = [
   {
     icon: Award,
     title: '15+ Tahun',
-    description: 'Pengalaman di industri konstruksi baja',
+    description: 'Pengalaman di industri konstruksi & kontraktor',
   },
   {
     icon: Users,
@@ -110,29 +110,41 @@ export default function About() {
               className="mt-3 text-balance text-3xl font-extrabold tracking-tight text-slate-900 sm:text-4xl"
               style={{ fontFamily: 'var(--font-heading)' }}
             >
-              Lebih dari 15 Tahun Membangun Kepercayaan
+              Mitra Konstruksi Terpercaya untuk Proyek Anda
             </h2>
             <p className="mt-6 text-base leading-relaxed text-slate-600">
-              CV Efata Jaya Truss didirikan di Sleman, Yogyakarta, dengan misi
-              menghadirkan solusi rangka atap baja berkualitas tinggi untuk
-              berbagai kebutuhan konstruksi. Dari rumah tinggal hingga proyek
-              komersial berskala besar, kami hadir dengan keahlian dan dedikasi
-              penuh.
+              <strong>CV Efata Jaya Truss</strong> merupakan perusahaan konstruksi terpercaya di Sleman, Yogyakarta, yang bergerak di bidang <em>pengadaan barang dan jasa konstruksi</em>. Kami menawarkan kerjasama kepada berbagai perusahaan maupun instansi pemerintah berdasarkan bidang keahlian kami yang telah teruji.
             </p>
             <p className="mt-4 text-base leading-relaxed text-slate-600">
-              Dengan tim engineer berpengalaman dan fasilitas fabrikasi modern,
-              kami mampu mendesain, memproduksi, dan memasang truss baja
-              yang presisi, kuat, dan tahan lama. Kepuasan klien adalah
-              prioritas utama kami.
+              Berpengalaman dalam pembangunan rumah huni, gudang, gedung pertemuan, <strong>jalan aspal</strong>, jalan cor beton, talud, jembatan, hingga pemasangan konstruksi atap baja dan roofing — kami hadir sebagai <strong>solusi satu atap</strong> untuk semua kebutuhan konstruksi Anda. Percayakan proyek Anda kepada kami.
             </p>
 
-            {/* Vision Statement */}
-            <div className="mt-8 rounded-xl border-l-4 border-brand-orange bg-amber-50/60 px-6 py-5">
-              <p className="text-sm font-semibold text-slate-900">Visi Kami</p>
-              <p className="mt-1 text-sm leading-relaxed text-slate-600">
-                Menjadi kontraktor truss baja terdepan di DIY yang dikenal atas
-                kualitas, ketepatan waktu, dan inovasi dalam setiap proyek.
-              </p>
+            {/* Visi & Misi */}
+            <div className="mt-8 space-y-4">
+              <div className="rounded-xl border-l-4 border-brand-orange bg-amber-50/60 px-6 py-5">
+                <p className="text-sm font-semibold text-slate-900">Visi Kami</p>
+                <p className="mt-1 text-sm leading-relaxed text-slate-600">
+                  Menjadi CV kontraktor dan perdagangan umum terbaik di Yogyakarta,
+                  dengan mengutamakan kepuasan pekerja dan pelanggan melalui hasil
+                  kerja berkualitas tinggi.
+                </p>
+              </div>
+              <div className="rounded-xl border border-slate-200 bg-slate-50 px-6 py-5">
+                <p className="text-sm font-semibold text-slate-900">Misi Kami</p>
+                <ul className="mt-3 space-y-2">
+                  {[
+                    'Menjaga kualitas sumber daya yang kami sediakan.',
+                    'Mengedepankan kepuasan pelanggan sebagai prioritas utama.',
+                    'Menghasilkan karya konstruksi dengan standar kualitas terbaik.',
+                    'Mewujudkan Zero Accident pada setiap aktivitas pekerjaan.',
+                  ].map((misi) => (
+                    <li key={misi} className="flex items-start gap-2 text-sm text-slate-600">
+                      <CheckCircle className="mt-0.5 h-4 w-4 shrink-0 text-brand-orange" />
+                      {misi}
+                    </li>
+                  ))}
+                </ul>
+              </div>
             </div>
           </div>
 
@@ -141,7 +153,7 @@ export default function About() {
             <div className="relative overflow-hidden rounded-2xl">
               <Image
                 src="/images/about-bg.jpg"
-                alt="Fasilitas fabrikasi CV Efata Jaya Truss"
+                alt="Proyek pengaspalan CV Efata Jaya Truss"
                 width={640}
                 height={480}
                 className="h-auto w-full object-cover"
@@ -156,7 +168,7 @@ export default function About() {
                   500+
                 </p>
                 <p className="mt-1 text-sm font-medium text-slate-600">
-                  Proyek Truss Baja Selesai
+                  Proyek Berhasil Diselesaikan
                 </p>
               </div>
             </div>

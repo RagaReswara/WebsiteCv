@@ -123,7 +123,7 @@ export default function Contact() {
             Hubungi Kami Sekarang
           </h2>
           <p className="mt-4 text-pretty text-base leading-relaxed text-slate-500">
-            Konsultasikan kebutuhan truss baja Anda. Tim kami siap membantu
+            Konsultasikan kebutuhan proyek aspal Anda. Tim kami siap membantu
             dengan respon cepat.
           </p>
         </div>
