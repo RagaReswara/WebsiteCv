@@ -3,7 +3,7 @@
 import { useEffect, useRef } from 'react'
 import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
-import { Building, CreditCard, FileText } from 'lucide-react'
+import { Building, FileText, TrendingUp } from 'lucide-react'
 
 gsap.registerPlugin(ScrollTrigger)
 
@@ -16,12 +16,6 @@ const companyInfo = [
   { label: 'SK Kemenkumham', value: 'No. AHU-0038124-AH.01.15 Tahun 2020' },
   { label: 'NPWP', value: '95.196.321.4-542.000' },
   { label: 'Bidang Usaha', value: 'Contractor & General Trading' },
-]
-
-const bankAccounts = [
-  { bank: 'Bank BPD', account: '046-221.000482', name: 'a/n Yohanes Rudiyono' },
-  { bank: 'Bank Mandiri', account: '137-00-20327744', name: 'a/n Heriwidi Dwi Hartini' },
-  { bank: 'Bank BRI', account: '0247-0107-9598-503', name: 'a/n Yohanes Rudiyono' },
 ]
 
 export default function CompanyData() {
@@ -90,9 +84,9 @@ export default function CompanyData() {
           </p>
         </div>
 
-        <div ref={contentRef} className="mt-16 grid gap-8 opacity-0 lg:grid-cols-2">
-          {/* Company Info Table */}
-          <div className="rounded-2xl border border-white/10 bg-white/5 p-8 backdrop-blur-sm">
+        <div ref={contentRef} className="mt-16 grid gap-8 opacity-0 lg:grid-cols-3">
+          {/* Company Info Table — spans 2 cols */}
+          <div className="rounded-2xl border border-white/10 bg-white/5 p-8 backdrop-blur-sm lg:col-span-2">
             <div className="mb-6 flex items-center gap-3">
               <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-brand-orange/20">
                 <Building className="h-5 w-5 text-brand-orange" />
@@ -107,7 +101,7 @@ export default function CompanyData() {
             <div className="divide-y divide-white/10">
               {companyInfo.map((item) => (
                 <div key={item.label} className="flex flex-col gap-0.5 py-3 sm:flex-row sm:gap-4">
-                  <span className="w-full shrink-0 text-xs font-semibold uppercase tracking-wider text-slate-400 sm:w-40">
+                  <span className="w-full shrink-0 text-xs font-semibold uppercase tracking-wider text-slate-400 sm:w-44">
                     {item.label}
                   </span>
                   <span className="text-sm text-slate-200">{item.value}</span>
@@ -116,39 +110,8 @@ export default function CompanyData() {
             </div>
           </div>
 
-          {/* Right Column: Bank + Legal Badge */}
+          {/* Right Column */}
           <div className="flex flex-col gap-6">
-            {/* Bank Accounts */}
-            <div className="rounded-2xl border border-white/10 bg-white/5 p-8 backdrop-blur-sm">
-              <div className="mb-6 flex items-center gap-3">
-                <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-brand-orange/20">
-                  <CreditCard className="h-5 w-5 text-brand-orange" />
-                </div>
-                <h3
-                  className="text-lg font-bold text-white"
-                  style={{ fontFamily: 'var(--font-heading)' }}
-                >
-                  Rekening Bank
-                </h3>
-              </div>
-              <div className="flex flex-col gap-4">
-                {bankAccounts.map((b) => (
-                  <div
-                    key={b.bank}
-                    className="rounded-xl border border-white/10 bg-white/5 p-4"
-                  >
-                    <p className="text-xs font-bold uppercase tracking-wider text-brand-orange">
-                      {b.bank}
-                    </p>
-                    <p className="mt-1 font-mono text-base font-semibold tracking-widest text-white">
-                      {b.account}
-                    </p>
-                    <p className="mt-0.5 text-xs text-slate-400">{b.name}</p>
-                  </div>
-                ))}
-              </div>
-            </div>
-
             {/* Legal Badge */}
             <div className="rounded-2xl border border-brand-orange/30 bg-brand-orange/10 p-6">
               <div className="flex items-start gap-4">
@@ -160,14 +123,46 @@ export default function CompanyData() {
                     className="font-bold text-white"
                     style={{ fontFamily: 'var(--font-heading)' }}
                   >
-                    Beroperasi Secara Legal & Transparan
+                    Berbadan Hukum Resmi
                   </p>
                   <p className="mt-1 text-sm leading-relaxed text-slate-300">
-                    CV Efata Jaya Truss adalah badan usaha resmi berbadan hukum
-                    dengan akta notaris, SK Kemenkumham, dan NPWP aktif. Setiap
-                    proyek dikerjakan dengan penuh pertanggungjawaban.
+                    CV Efata Jaya Truss adalah badan usaha resmi dengan akta notaris,
+                    SK Kemenkumham, dan NPWP aktif. Setiap proyek dikerjakan
+                    dengan penuh pertanggungjawaban.
                   </p>
                 </div>
+              </div>
+            </div>
+
+            {/* Stats */}
+            <div className="rounded-2xl border border-white/10 bg-white/5 p-6 backdrop-blur-sm">
+              <div className="mb-5 flex items-center gap-3">
+                <div className="flex h-9 w-9 items-center justify-center rounded-xl bg-brand-orange/20">
+                  <TrendingUp className="h-4 w-4 text-brand-orange" />
+                </div>
+                <p
+                  className="text-sm font-bold text-white"
+                  style={{ fontFamily: 'var(--font-heading)' }}
+                >
+                  Pencapaian Kami
+                </p>
+              </div>
+              <div className="flex flex-col gap-5">
+                {[
+                  { value: '15+', label: 'Tahun Pengalaman' },
+                  { value: '500+', label: 'Proyek Selesai' },
+                  { value: '200+', label: 'Klien Puas' },
+                ].map((stat) => (
+                  <div key={stat.label} className="flex items-center gap-4">
+                    <p
+                      className="text-3xl font-extrabold text-brand-orange"
+                      style={{ fontFamily: 'var(--font-heading)' }}
+                    >
+                      {stat.value}
+                    </p>
+                    <p className="text-sm text-slate-400">{stat.label}</p>
+                  </div>
+                ))}
               </div>
             </div>
           </div>

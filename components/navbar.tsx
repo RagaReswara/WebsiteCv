@@ -272,7 +272,7 @@ export default function Navbar() {
                   }}
                   className={`nav-link relative block px-4 py-2 text-sm font-medium transition-colors duration-200 ${isActive
                     ? 'text-brand-orange'
-                    : 'text-slate-600 hover:text-slate-900'
+                    : 'text-black hover:text-slate-400'
                     }`}
                 >
                   {link.label}
