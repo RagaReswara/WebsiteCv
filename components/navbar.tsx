@@ -270,11 +270,10 @@ export default function Navbar() {
                     e.preventDefault()
                     handleNavClick(link.href, e.currentTarget)
                   }}
-                  className={`nav-link relative block px-4 py-2 text-sm font-medium transition-colors duration-200 ${
-                    isActive
-                      ? 'text-brand-orange'
-                      : 'text-slate-600 hover:text-slate-900'
-                  }`}
+                  className={`nav-link relative block px-4 py-2 text-sm font-medium transition-colors duration-200 ${isActive
+                    ? 'text-brand-orange'
+                    : 'text-slate-600 hover:text-slate-900'
+                    }`}
                 >
                   {link.label}
                   <span
@@ -363,11 +362,10 @@ export default function Navbar() {
                       e.preventDefault()
                       handleMobileNavClick(link.href)
                     }}
-                    className={`flex items-center gap-3 rounded-xl px-4 py-3 text-sm font-medium transition-colors ${
-                      isActive
-                        ? 'bg-orange-50 text-brand-orange'
-                        : 'text-slate-600 hover:bg-slate-50 hover:text-slate-900'
-                    }`}
+                    className={`flex items-center gap-3 rounded-xl px-4 py-3 text-sm font-medium transition-colors ${isActive
+                      ? 'bg-orange-50 text-brand-orange'
+                      : 'text-slate-600 hover:bg-slate-50 hover:text-slate-900'
+                      }`}
                   >
                     {isActive && (
                       <span className="h-1.5 w-1.5 rounded-full bg-brand-orange" />

@@ -1,4 +1,4 @@
-export const categories = ['All', 'Aspal', 'Kontraktor Aspal', 'Talud', 'Bahu Jalan'] as const
+export const categories = ['All', 'Jalan & Aspal', 'Talud & Drainase', 'Perataan Tanah', 'Bangunan', 'Atap & Baja', 'Pagar & Komersial'] as const
 
 export type Category = (typeof categories)[number]
 
@@ -14,98 +14,118 @@ export interface Project {
 export const projects: Project[] = [
   {
     src: '/images/project-1.jpg',
-    alt: 'Pengaspalan jalan raya',
-    label: 'Pengaspalan Jalan Raya',
-    category: 'Aspal',
-    type: 'Aspal / Portofolio',
+    alt: 'Pengaspalan hotmix jalan raya',
+    label: 'Pengaspalan Hotmix Jalan Raya',
+    category: 'Jalan & Aspal',
+    type: 'Pengaspalan Hotmix',
   },
   {
     src: '/images/project-2.jpg',
-    alt: 'Kontraktor aspal jalan',
-    label: 'Kontraktor Aspal',
-    category: 'Kontraktor Aspal',
-    type: 'Kontraktor Aspal / Portofolio',
+    alt: 'Pemasangan paving dan corblok',
+    label: 'Pemasangan Paving & Corblok',
+    category: 'Jalan & Aspal',
+    type: 'Paving & Corblok',
   },
   {
     src: '/images/project-3.jpg',
     alt: 'Pembangunan talud penahan tanah',
-    label: 'Pembangunan Talud',
-    category: 'Talud',
-    type: 'Talud / Portofolio',
+    label: 'Pembangunan Talud Penahan Tanah',
+    category: 'Talud & Drainase',
+    type: 'Talud & Irigasi',
   },
   {
     src: '/images/project-4.jpg',
-    alt: 'Perbaikan bahu jalan',
-    label: 'Perbaikan Bahu Jalan',
-    category: 'Bahu Jalan',
-    type: 'Bahu Jalan / Portofolio',
+    alt: 'Perataan dan pemadatan lahan proyek',
+    label: 'Perataan & Pemadatan Lahan',
+    category: 'Perataan Tanah',
+    type: 'Perataan Lahan',
   },
   {
     src: '/images/project-5.jpg',
-    alt: 'Pengaspalan area parkir',
-    label: 'Pengaspalan Area Parkir',
-    category: 'Aspal',
-    type: 'Aspal / Portofolio',
+    alt: 'Pembangunan rumah tinggal',
+    label: 'Pembangunan Rumah Tinggal',
+    category: 'Bangunan',
+    type: 'Rumah Tinggal',
   },
   {
     src: '/images/project-6.jpg',
-    alt: 'Pekerjaan kontraktor aspal',
-    label: 'Pekerjaan Kontraktor Aspal',
-    category: 'Kontraktor Aspal',
-    type: 'Kontraktor Aspal / Portofolio',
+    alt: 'Pemasangan rangka baja ringan atap',
+    label: 'Pemasangan Rangka Baja Ringan',
+    category: 'Atap & Baja',
+    type: 'Rangka Baja Ringan',
   },
 ]
 
 // Data galeri lengkap per kategori (untuk halaman detail portofolio)
 export const galleryData: Record<Exclude<Category, 'All'>, { title: string; description: string; images: { src: string; alt: string }[] }> = {
-  Aspal: {
-    title: 'Proyek Aspal',
-    description: 'Dokumentasi proyek pengaspalan jalan, area parkir, dan infrastruktur lainnya yang telah kami kerjakan.',
+  'Jalan & Aspal': {
+    title: 'Proyek Jalan & Aspal',
+    description: 'Dokumentasi proyek pengaspalan hotmix, penetrasi jalan, pemasangan paving dan corblok yang telah kami kerjakan.',
     images: [
-      { src: '/images/project-1.jpg', alt: 'Pengaspalan jalan raya' },
-      { src: '/images/project-5.jpg', alt: 'Pengaspalan area parkir' },
-      { src: '/images/project-7.jpg', alt: 'Proyek aspal jalan desa' },
+      { src: '/images/project-1.jpg', alt: 'Pengaspalan hotmix jalan raya' },
+      { src: '/images/project-2.jpg', alt: 'Pemasangan paving dan corblok' },
+      { src: '/images/project-7.jpg', alt: 'Penetrasi jalan desa' },
     ],
   },
-  'Kontraktor Aspal': {
-    title: 'Proyek Kontraktor Aspal',
-    description: 'Dokumentasi proyek kontraktor aspal untuk jalan raya, area parkir, dan infrastruktur lainnya yang telah kami kerjakan.',
-    images: [
-      { src: '/images/project-2.jpg', alt: 'Kontraktor aspal jalan raya' },
-      { src: '/images/project-6.jpg', alt: 'Pekerjaan kontraktor aspal' },
-      { src: '/images/project-8.jpg', alt: 'Kontraktor aspal area gudang' },
-    ],
-  },
-  Talud: {
-    title: 'Proyek Talud',
-    description: 'Dokumentasi proyek pembangunan talud penahan tanah untuk stabilisasi lereng dan perkuatan tebing.',
+  'Talud & Drainase': {
+    title: 'Proyek Talud & Drainase',
+    description: 'Dokumentasi proyek pembangunan talud penahan tanah, irigasi, drainase, dan sumur resapan.',
     images: [
       { src: '/images/project-3.jpg', alt: 'Pembangunan talud penahan tanah' },
-      { src: '/images/project-9.jpg', alt: 'Talud beton bertulang' },
+      { src: '/images/project-8.jpg', alt: 'Pembangunan saluran irigasi' },
+      { src: '/images/project-9.jpg', alt: 'Sistem drainase kawasan' },
     ],
   },
-  'Bahu Jalan': {
-    title: 'Proyek Bahu Jalan',
-    description: 'Dokumentasi proyek perbaikan dan pembangunan bahu jalan untuk meningkatkan keselamatan dan kenyamanan pengguna jalan.',
+  'Perataan Tanah': {
+    title: 'Proyek Perataan & Pemadatan Tanah',
+    description: 'Dokumentasi proyek perataan lahan, pengurukan, dan pemadatan tanah untuk persiapan pembangunan.',
     images: [
-      { src: '/images/project-4.jpg', alt: 'Perbaikan bahu jalan' },
-      { src: '/images/project-7.jpg', alt: 'Pembangunan bahu jalan baru' },
+      { src: '/images/project-4.jpg', alt: 'Perataan dan pemadatan lahan' },
+      { src: '/images/project-10.jpg', alt: 'Pengurukan dan perataan area proyek' },
+    ],
+  },
+  'Bangunan': {
+    title: 'Proyek Gedung & Rumah Tinggal',
+    description: 'Dokumentasi proyek pembangunan rumah tinggal, gudang, gedung pertemuan, pendopo, dan gereja.',
+    images: [
+      { src: '/images/project-5.jpg', alt: 'Pembangunan rumah tinggal' },
+      { src: '/images/project-11.jpg', alt: 'Pembangunan gudang' },
+      { src: '/images/project-12.jpg', alt: 'Pembangunan gedung pertemuan' },
+    ],
+  },
+  'Atap & Baja': {
+    title: 'Proyek Konstruksi Atap & Rangka Baja',
+    description: 'Dokumentasi proyek pemasangan rangka baja ringan, roof covering, dan plafon PVC untuk berbagai bangunan.',
+    images: [
+      { src: '/images/project-6.jpg', alt: 'Pemasangan rangka baja ringan' },
+      { src: '/images/project-13.jpg', alt: 'Instalasi roof covering' },
+      { src: '/images/project-14.jpg', alt: 'Pemasangan plafon PVC' },
+    ],
+  },
+  'Pagar & Komersial': {
+    title: 'Proyek Pagar & Infrastruktur Komersial',
+    description: 'Dokumentasi proyek pembuatan pagar rumah, pagar kantor, dan infrastruktur kawasan komersial.',
+    images: [
+      { src: '/images/project-15.jpg', alt: 'Pembuatan pagar rumah' },
+      { src: '/images/project-16.jpg', alt: 'Pagar kawasan komersial' },
     ],
   },
 }
 
 // Helper: convert category name to URL slug
 export function categoryToSlug(category: string): string {
-  return category.toLowerCase().replace(/\s+/g, '-')
+  return category.toLowerCase().replace(/\s+/g, '-').replace(/&/g, 'dan')
 }
 
 // Helper: convert URL slug back to category name
 export function slugToCategory(slug: string): Exclude<Category, 'All'> | null {
   const map: Record<string, Exclude<Category, 'All'>> = {
-    aspal: 'Aspal',
-    'kontraktor-aspal': 'Kontraktor Aspal',
-    talud: 'Talud',
-    'bahu-jalan': 'Bahu Jalan',
+    'jalan-dan-aspal': 'Jalan & Aspal',
+    'talud-dan-drainase': 'Talud & Drainase',
+    'perataan-tanah': 'Perataan Tanah',
+    'bangunan': 'Bangunan',
+    'atap-dan-baja': 'Atap & Baja',
+    'pagar-dan-komersial': 'Pagar & Komersial',
   }
   return map[slug] || null
 }

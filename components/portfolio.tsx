@@ -5,9 +5,18 @@ import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import Image from 'next/image'
 import Link from 'next/link'
-import { categories, projects, categoryToSlug } from '@/lib/projects'
+import { categories, projects, categoryToSlug, type Category } from '@/lib/projects'
 
 gsap.registerPlugin(ScrollTrigger)
+
+const categoryButtonLabels: Record<Exclude<Category, 'All'>, string> = {
+  'Jalan & Aspal': 'Lihat Proyek Jalan',
+  'Talud & Drainase': 'Lihat Proyek Talud',
+  'Perataan Tanah': 'Lihat Proyek Tanah',
+  'Bangunan': 'Lihat Proyek Bangunan',
+  'Atap & Baja': 'Lihat Proyek Atap',
+  'Pagar & Komersial': 'Lihat Proyek Pagar',
+}
 
 export default function Portfolio() {
   const sectionRef = useRef<HTMLElement>(null)
@@ -171,7 +180,7 @@ export default function Portfolio() {
                     href={`/portofolio/${categoryToSlug(project.category)}`}
                     className="mt-4 inline-block rounded-md border border-brand-orange px-5 py-2 text-xs font-bold uppercase tracking-wider text-brand-orange transition-all duration-300 hover:bg-brand-orange hover:text-white"
                   >
-                    Lihat Lebih Banyak
+                    {categoryButtonLabels[project.category]}
                   </Link>
                 </div>
               </div>
