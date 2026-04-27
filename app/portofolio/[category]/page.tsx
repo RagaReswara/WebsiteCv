@@ -136,7 +136,7 @@ export default function PortfolioCategory() {
                 <button
                   key={cat}
                   onClick={() => router.push(`/portofolio/${categoryToSlug(cat)}`)}
-                  className={`rounded-xl px-5 py-2.5 text-sm font-medium transition-all duration-300 ${
+                  className={`cursor-pointer rounded-xl px-5 py-2.5 text-sm font-medium transition-all duration-300 ${
                     cat === category
                       ? 'bg-brand-orange text-white shadow-lg shadow-brand-orange/25'
                       : 'text-slate-300 hover:bg-white/5 hover:text-white'
@@ -215,7 +215,7 @@ export default function PortfolioCategory() {
           {/* Close button */}
           <button
             onClick={() => setLightboxIndex(null)}
-            className="absolute top-6 right-6 z-50 rounded-full bg-white/10 p-2 text-white transition-colors hover:bg-white/20"
+            className="absolute top-6 right-6 z-50 cursor-pointer rounded-full bg-white/10 p-2 text-white transition-colors hover:bg-white/20"
           >
             <X className="h-6 w-6" />
           </button>
@@ -228,7 +228,7 @@ export default function PortfolioCategory() {
                 (lightboxIndex - 1 + data.images.length) % data.images.length
               )
             }}
-            className="absolute left-4 z-50 rounded-full bg-white/10 p-3 text-white transition-colors hover:bg-white/20 md:left-8"
+            className="absolute left-4 z-50 cursor-pointer rounded-full bg-white/10 p-3 text-white transition-colors hover:bg-white/20 md:left-8"
           >
             <ChevronLeft className="h-6 w-6" />
           </button>
@@ -259,7 +259,7 @@ export default function PortfolioCategory() {
                 (lightboxIndex + 1) % data.images.length
               )
             }}
-            className="absolute right-4 z-50 rounded-full bg-white/10 p-3 text-white transition-colors hover:bg-white/20 md:right-8"
+            className="absolute right-4 z-50 cursor-pointer rounded-full bg-white/10 p-3 text-white transition-colors hover:bg-white/20 md:right-8"
           >
             <ChevronRight className="h-6 w-6" />
           </button>

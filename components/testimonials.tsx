@@ -155,7 +155,7 @@ export default function Testimonials() {
             </div>
 
             {/* Content */}
-            <p className="text-lg leading-relaxed text-slate-600">
+            <p className="text-justify text-lg leading-relaxed text-slate-600">
               {`"${t.content}"`}
             </p>
 
@@ -186,7 +186,7 @@ export default function Testimonials() {
             <button
               onClick={prev}
               aria-label="Testimoni sebelumnya"
-              className="flex h-10 w-10 items-center justify-center rounded-full border border-slate-200 bg-white text-slate-600 transition-all hover:border-brand-orange hover:text-brand-orange"
+              className="flex h-10 w-10 cursor-pointer items-center justify-center rounded-full border border-slate-200 bg-white text-slate-600 transition-all hover:border-brand-orange hover:text-brand-orange"
             >
               <ChevronLeft className="h-5 w-5" />
             </button>
@@ -198,7 +198,7 @@ export default function Testimonials() {
                   key={i}
                   onClick={() => setCurrent(i)}
                   aria-label={`Testimoni ${i + 1}`}
-                  className={`h-2 rounded-full transition-all duration-300 ${
+                  className={`h-2 cursor-pointer rounded-full transition-all duration-300 ${
                     i === current
                       ? 'w-8 bg-brand-orange'
                       : 'w-2 bg-slate-300 hover:bg-slate-400'
@@ -210,7 +210,7 @@ export default function Testimonials() {
             <button
               onClick={next}
               aria-label="Testimoni selanjutnya"
-              className="flex h-10 w-10 items-center justify-center rounded-full border border-slate-200 bg-white text-slate-600 transition-all hover:border-brand-orange hover:text-brand-orange"
+              className="flex h-10 w-10 cursor-pointer items-center justify-center rounded-full border border-slate-200 bg-white text-slate-600 transition-all hover:border-brand-orange hover:text-brand-orange"
             >
               <ChevronRight className="h-5 w-5" />
             </button>

@@ -125,7 +125,7 @@ export default function CompanyData() {
                   >
                     Berbadan Hukum Resmi
                   </p>
-                  <p className="mt-1 text-sm leading-relaxed text-slate-300">
+                  <p className="mt-1 text-justify text-sm leading-relaxed text-slate-300">
                     CV Efata Jaya Truss adalah badan usaha resmi dengan akta notaris,
                     SK Kemenkumham, dan NPWP aktif. Setiap proyek dikerjakan
                     dengan penuh pertanggungjawaban.

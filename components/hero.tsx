@@ -16,6 +16,7 @@ export default function Hero() {
   const ctaRef = useRef<HTMLDivElement>(null)
   const badgeRef = useRef<HTMLDivElement>(null)
   const statsRef = useRef<HTMLDivElement>(null)
+  const lineRef = useRef<HTMLDivElement>(null)
 
   useEffect(() => {
     const ctx = gsap.context(() => {
@@ -44,6 +45,12 @@ export default function Hero() {
           { y: 40, opacity: 0 },
           { y: 0, opacity: 1, duration: 1 },
           '-=0.4'
+        )
+        .fromTo(
+          lineRef.current,
+          { scaleX: 0, opacity: 0, transformOrigin: 'left' },
+          { scaleX: 1, opacity: 1, duration: 0.8 },
+          '-=0.6'
         )
         .fromTo(
           subRef.current,
@@ -88,83 +95,89 @@ export default function Hero() {
       </div>
 
       <div className="relative mx-auto w-full max-w-7xl px-6 pb-24 pt-32 lg:px-8 lg:pt-44">
-        <div className="max-w-2xl">
+        <div className="max-w-4xl">
           {/* Badge */}
           <div ref={badgeRef} className="mb-6 opacity-0">
             <span className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-4 py-1.5 text-xs font-semibold uppercase tracking-wider text-white backdrop-blur-sm">
               <span className="h-1.5 w-1.5 rounded-full bg-brand-orange" />
-              Kontraktor Aspal Profesional
+              General Contractor & Trading
             </span>
           </div>
 
           {/* Headline */}
           <h1
             ref={headlineRef}
-            className="text-balance text-4xl font-extrabold leading-tight tracking-tight text-white opacity-0 sm:text-5xl lg:text-6xl"
+            className="text-4xl font-extrabold leading-tight tracking-tight text-white opacity-0 sm:text-5xl lg:text-6xl"
             style={{ fontFamily: 'var(--font-heading)' }}
           >
-            Kontraktor Aspal{' '}
-            <span className="text-brand-orange">Terpercaya</span> di
-            Yogyakarta
+            <span className="text-brand-orange">Satu Mitra</span>{' '}
+            untuk Semua Kebutuhan Proyek Anda
+            <br />
+            di Yogyakarta
           </h1>
+        </div>
 
-          {/* Sub-text */}
-          <p
-            ref={subRef}
-            className="mt-6 max-w-xl text-lg leading-relaxed text-slate-300 opacity-0"
-          >
-            {'Pengaspalan \u2022 Konstruksi \u2022 Pemeliharaan Jalan. Mitra terpercaya Anda untuk proyek aspal berkualitas tinggi di Sleman dan seluruh DIY.'}
-          </p>
+        {/* Separator Line */}
+        <div
+          ref={lineRef}
+          className="mt-12 mb-8 h-px w-full bg-linear-to-r from-white/40 via-white/10 to-transparent opacity-0"
+        />
 
-          {/* CTA */}
-          <div
-            ref={ctaRef}
-            className="mt-8 flex flex-wrap items-center gap-4 opacity-0"
-          >
-            <a
-              href="#proyek"
-              onClick={(e) => {
-                e.preventDefault()
-                document
-                  .getElementById('proyek')
-                  ?.scrollIntoView({ behavior: 'smooth' })
-              }}
-              className="inline-flex items-center gap-2 rounded-lg bg-brand-orange px-7 py-3.5 text-sm font-bold text-white shadow-lg shadow-brand-orange/20 transition-all hover:bg-brand-orange-dark hover:shadow-xl"
+        {/* Bottom Part */}
+        <div className="flex flex-col gap-12 lg:flex-row lg:items-start lg:justify-between lg:gap-8">
+
+          {/* Left Column (Stats & CTA) */}
+          <div className="flex flex-col gap-10">
+            {/* Stats */}
+            <div
+              ref={statsRef}
+              className="flex flex-wrap items-center gap-10 opacity-0 lg:pt-2"
             >
-              Lihat Proyek
-              <ArrowRight className="h-4 w-4" />
-            </a>
-            <a
-              href="https://wa.me/6281234567890"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 rounded-lg border border-white/20 bg-white/10 px-7 py-3.5 text-sm font-semibold text-white backdrop-blur-sm transition-all hover:bg-white/20"
-            >
-              Hubungi Kami
-              <ChevronDown className="h-4 w-4" />
-            </a>
-          </div>
+              {[
+                { value: '15+', label: 'Tahun Pengalaman' },
+                { value: '500+', label: 'Proyek Selesai' },
+                { value: '200+', label: 'Klien Puas' },
+              ].map((stat) => (
+                <div key={stat.label}>
+                  <p
+                    className="text-3xl font-extrabold text-white"
+                    style={{ fontFamily: 'var(--font-heading)' }}
+                  >
+                    {stat.value}
+                  </p>
+                  <p className="mt-1 text-sm text-slate-400">{stat.label}</p>
+                </div>
+              ))}
+            </div>
 
-          {/* Stats */}
-          <div
-            ref={statsRef}
-            className="mt-16 flex flex-wrap items-center gap-10 border-t border-white/10 pt-8 opacity-0"
-          >
-            {[
-              { value: '15+', label: 'Tahun Pengalaman' },
-              { value: '500+', label: 'Proyek Selesai' },
-              { value: '200+', label: 'Klien Puas' },
-            ].map((stat) => (
-              <div key={stat.label}>
-                <p
-                  className="text-3xl font-extrabold text-white"
-                  style={{ fontFamily: 'var(--font-heading)' }}
-                >
-                  {stat.value}
-                </p>
-                <p className="mt-1 text-sm text-slate-400">{stat.label}</p>
-              </div>
-            ))}
+            {/* CTA */}
+            <div
+              ref={ctaRef}
+              className="flex flex-wrap items-center gap-4 opacity-0"
+            >
+              <a
+                href="#proyek"
+                onClick={(e) => {
+                  e.preventDefault()
+                  document
+                    .getElementById('proyek')
+                    ?.scrollIntoView({ behavior: 'smooth' })
+                }}
+                className="inline-flex items-center gap-2 rounded-lg bg-brand-orange px-7 py-3.5 text-sm font-bold text-white shadow-lg shadow-brand-orange/20 transition-all hover:bg-brand-orange-dark hover:shadow-xl"
+              >
+                Lihat Proyek
+                <ArrowRight className="h-4 w-4" />
+              </a>
+              <a
+                href="https://wa.me/6281234567890"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 rounded-lg border border-white/20 bg-white/10 px-7 py-3.5 text-sm font-semibold text-white backdrop-blur-sm transition-all hover:bg-white/20"
+              >
+                Hubungi Kami
+                <ChevronDown className="h-4 w-4" />
+              </a>
+            </div>
           </div>
         </div>
       </div>

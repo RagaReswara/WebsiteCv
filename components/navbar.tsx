@@ -307,7 +307,7 @@ export default function Navbar() {
         <button
           aria-label={mobileOpen ? 'Tutup menu' : 'Buka menu'}
           onClick={() => (mobileOpen ? closeMobileMenu() : openMobileMenu())}
-          className="relative z-[60] rounded-lg p-2 text-slate-700 transition-colors hover:bg-slate-100 lg:hidden"
+          className="relative z-[60] cursor-pointer rounded-lg p-2 text-slate-700 transition-colors hover:bg-slate-100 lg:hidden"
         >
           {mobileOpen ? (
             <X className="h-5 w-5" />
@@ -343,7 +343,7 @@ export default function Navbar() {
             <button
               onClick={closeMobileMenu}
               aria-label="Tutup menu"
-              className="rounded-lg p-1.5 text-slate-500 transition-colors hover:bg-slate-100"
+              className="cursor-pointer rounded-lg p-1.5 text-slate-500 transition-colors hover:bg-slate-100"
             >
               <X className="h-5 w-5" />
             </button>

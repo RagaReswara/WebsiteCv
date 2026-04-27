@@ -155,7 +155,7 @@ export default function Services() {
                 </h3>
 
                 {/* Description */}
-                <p className="mt-2 text-sm leading-relaxed text-slate-500">
+                <p className="mt-2 text-justify text-sm leading-relaxed text-slate-500">
                   {service.description}
                 </p>
 

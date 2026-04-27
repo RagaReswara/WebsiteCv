@@ -130,7 +130,7 @@ export default function WhyChooseUs() {
                 >
                   {benefit.title}
                 </h3>
-                <p className="mt-2 text-sm leading-relaxed text-slate-500">
+                <p className="mt-2 text-justify text-sm leading-relaxed text-slate-500">
                   {benefit.description}
                 </p>
               </div>

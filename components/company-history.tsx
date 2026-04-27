@@ -4,6 +4,7 @@ import { useEffect, useRef } from 'react'
 import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import { Milestone } from 'lucide-react'
+import Image from 'next/image'
 
 gsap.registerPlugin(ScrollTrigger)
 
@@ -14,6 +15,7 @@ const milestones = [
     description:
       'CV Efata Jaya Truss bermula dari usaha perorangan di bidang konstruksi rangka atap dari bambu dan bangunan bambu — cikal bakal semangat membangun yang tak pernah padam dan terus berkembang hingga hari ini.',
     accent: true,
+    image: '/images/project-1.jpg',
   },
   {
     year: '2013',
@@ -21,6 +23,7 @@ const milestones = [
     description:
       'Merespons kebutuhan pasar yang terus berkembang, kami mulai mengadopsi material baja ringan dan plafon PVC. Langkah berani ini membuka babak baru kapasitas layanan kami yang lebih modern dan kompetitif.',
     accent: false,
+    image: '/images/project-2.jpg',
   },
   {
     year: '2014',
@@ -28,6 +31,7 @@ const milestones = [
     description:
       'Nama "Efata Truss" mulai dikenal di Yogyakarta. Dari proyek rumah tinggal, pendopo, hingga gereja — kepercayaan klien terus bertumbuh. Reputasi kami dibangun satu proyek berkualitas demi satu proyek berkualitas.',
     accent: false,
+    image: '/images/project-3.jpg',
   },
   {
     year: '2018',
@@ -35,6 +39,7 @@ const milestones = [
     description:
       'Tonggak bersejarah: kami mulai mengerjakan proyek-proyek pemerintah desa — pengaspalan jalan, pembangunan talud, corblok, dan irigasi. Kepercayaan pemerintah kepada kami adalah bukti nyata kualitas yang tak perlu diragukan.',
     accent: false,
+    image: '/images/project-4.jpg',
   },
   {
     year: '2020',
@@ -42,6 +47,7 @@ const milestones = [
     description:
       'Dengan Akta Pendirian No. 13 tanggal 30 Juni 2020 dan SK Kemenkumham No. AHU-0038124-AH.01.15, CV Efata Jaya Truss resmi berbadan hukum. Fondasi legal yang kuat untuk melayani proyek yang lebih besar dan lebih ambisius.',
     accent: true,
+    image: '/images/project-5.jpg',
   },
 ]
 
@@ -119,30 +125,27 @@ export default function CompanyHistory() {
           {/* Center line - desktop only */}
           <div className="absolute left-1/2 top-0 hidden h-full w-px -translate-x-1/2 bg-gradient-to-b from-brand-orange/30 via-brand-orange/50 to-brand-orange/10 lg:block" />
 
-          <div className="flex flex-col gap-10">
+          <div className="flex flex-col">
             {milestones.map((m, i) => (
               <div
                 key={m.year}
                 ref={(el) => { itemsRef.current[i] = el }}
-                className={`relative flex opacity-0 ${
-                  i % 2 === 0 ? 'lg:flex-row' : 'lg:flex-row-reverse'
-                } flex-col items-center gap-6 lg:gap-10`}
+                className={`relative flex opacity-0 ${i % 2 === 0 ? 'lg:flex-row' : 'lg:flex-row-reverse'
+                  } flex-col items-center gap-6 lg:gap-10`}
               >
                 {/* Content Card */}
                 <div className="w-full lg:w-[calc(50%-2.5rem)]">
                   <div
-                    className={`group rounded-2xl border p-6 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-md ${
-                      m.accent
-                        ? 'border-brand-orange/30 bg-amber-50'
-                        : 'border-slate-200 bg-white'
-                    }`}
+                    className={`group relative overflow-hidden rounded-2xl border p-6 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-md ${m.accent
+                      ? 'border-brand-orange/30 bg-amber-50'
+                      : 'border-slate-200 bg-white'
+                      }`}
                   >
                     <span
-                      className={`inline-block rounded-full px-3 py-1 text-xs font-bold tracking-wider ${
-                        m.accent
-                          ? 'bg-brand-orange text-white'
-                          : 'bg-slate-100 text-slate-600'
-                      }`}
+                      className={`inline-block rounded-full px-3 py-1 text-xs font-bold tracking-wider ${m.accent
+                        ? 'bg-brand-orange text-white'
+                        : 'bg-slate-100 text-slate-600'
+                        }`}
                     >
                       {m.year}
                     </span>
@@ -152,7 +155,7 @@ export default function CompanyHistory() {
                     >
                       {m.title}
                     </h3>
-                    <p className="mt-2 text-sm leading-relaxed text-slate-500">
+                    <p className="mt-2 text-justify text-sm leading-relaxed text-slate-500">
                       {m.description}
                     </p>
                   </div>
@@ -161,18 +164,28 @@ export default function CompanyHistory() {
                 {/* Center dot */}
                 <div className="hidden shrink-0 lg:flex">
                   <div
-                    className={`flex h-10 w-10 items-center justify-center rounded-full shadow-md ${
-                      m.accent
-                        ? 'bg-brand-orange text-white'
-                        : 'bg-white text-brand-orange border-2 border-brand-orange/40'
-                    }`}
+                    className={`flex h-10 w-10 items-center justify-center rounded-full shadow-md ${m.accent
+                      ? 'bg-brand-orange text-white'
+                      : 'bg-white text-brand-orange border-2 border-brand-orange/40'
+                      }`}
                   >
                     <Milestone className="h-4 w-4" />
                   </div>
                 </div>
 
-                {/* Spacer */}
-                <div className="hidden w-[calc(50%-2.5rem)] lg:block" />
+                {/* Image Section */}
+                <div className="hidden w-full lg:block lg:w-[calc(50%-2.5rem)]">
+                  <div className="relative aspect-video w-full overflow-hidden rounded-2xl shadow-md transition-all duration-300 hover:shadow-lg">
+                    <Image
+                      src={m.image}
+                      alt={`Dokumentasi ${m.year}`}
+                      fill
+                      className="object-cover transition-transform duration-700 hover:scale-105"
+                      sizes="(max-width: 1024px) 100vw, 50vw"
+                    />
+                    <div className="absolute inset-0 rounded-2xl ring-1 ring-inset ring-black/10" />
+                  </div>
+                </div>
               </div>
             ))}
           </div>

@@ -147,7 +147,7 @@ export default function WorkExperience() {
                 </h3>
 
                 {/* Description */}
-                <p className="mt-2 text-sm leading-relaxed text-slate-500">
+                <p className="mt-2 text-justify text-sm leading-relaxed text-slate-500">
                   {exp.description}
                 </p>
 
