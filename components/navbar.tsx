@@ -252,7 +252,7 @@ export default function Navbar() {
               Efata Jaya Truss
             </span>
             <span className="text-[10px] font-medium uppercase tracking-widest text-slate-400">
-              Kontraktor & Trading
+              Contractor & Trading
             </span>
           </div>
         </a>
