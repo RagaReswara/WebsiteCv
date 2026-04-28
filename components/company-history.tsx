@@ -100,10 +100,10 @@ export default function CompanyHistory() {
   }, [])
 
   return (
-    <section id="sejarah" ref={sectionRef} className="bg-slate-100 pt-24 lg:pt-32 pb-0">
+    <section id="sejarah" ref={sectionRef} className="bg-slate-100 py-24 lg:py-32">
       <div className="mx-auto max-w-7xl px-6 lg:px-8 mb-16">
         {/* Section Title */}
-        <div ref={titleRef} className="mx-auto max-w-2xl text-center opacity-0">
+        <div ref={titleRef} className="mx-auto flex max-w-2xl flex-col items-center text-center opacity-0">
           <p className="text-sm font-bold uppercase tracking-widest text-brand-orange">
             Perjalanan Kami
           </p>
@@ -121,9 +121,9 @@ export default function CompanyHistory() {
       </div>
 
       {/* Timeline with Constrained Backgrounds */}
-      <div className="relative mx-auto flex w-full max-w-7xl flex-col px-6 lg:px-8 pb-24">
+      <div className="relative mx-auto flex w-full max-w-7xl flex-col px-6 lg:px-8">
         {/* Center line - desktop only */}
-        <div className="absolute left-1/2 top-0 hidden h-full w-px -translate-x-1/2 bg-slate-300 lg:block z-20" />
+        <div className="absolute left-1/2 top-3 bottom-3 hidden w-px -translate-x-1/2 bg-slate-300 lg:block z-20" />
 
         {milestones.map((m, i) => (
           <div

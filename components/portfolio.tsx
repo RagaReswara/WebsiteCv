@@ -110,7 +110,7 @@ export default function Portfolio() {
     >
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         {/* Section Title */}
-        <div ref={titleRef} className="mx-auto max-w-2xl text-center opacity-0">
+        <div ref={titleRef} className="mx-auto flex max-w-2xl flex-col items-center text-center opacity-0">
           <p className="text-sm font-bold uppercase tracking-widest text-brand-orange">
             Proyek Terbaru
           </p>

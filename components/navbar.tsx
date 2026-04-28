@@ -226,7 +226,8 @@ export default function Navbar() {
   )
 
   return (
-    <header ref={headerRef} className="fixed top-0 left-0 right-0 z-50">
+    <>
+      <header ref={headerRef} className="fixed top-0 left-0 right-0 z-50">
       <nav className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4 lg:px-8">
         {/* Logo */}
         <a
@@ -294,7 +295,7 @@ export default function Navbar() {
 
         {/* Desktop CTA */}
         <a
-          href="https://wa.me/6281234567890"
+          href="https://wa.me/6282227196772"
           target="_blank"
           rel="noopener noreferrer"
           className="hidden items-center gap-2 rounded-lg bg-brand-orange px-5 py-2.5 text-sm font-semibold text-white shadow-sm transition-all duration-200 hover:bg-brand-orange-dark hover:shadow-md active:scale-95 lg:flex"
@@ -316,11 +317,12 @@ export default function Navbar() {
           )}
         </button>
       </nav>
+      </header>
 
       {/* Mobile Menu Overlay */}
       {mobileOpen && (
         <div
-          className="fixed inset-0 z-40 bg-brand-brown/20 backdrop-blur-sm lg:hidden"
+          className="fixed inset-0 z-[60] bg-brand-brown/40 backdrop-blur-sm lg:hidden"
           onClick={closeMobileMenu}
         />
       )}
@@ -329,7 +331,7 @@ export default function Navbar() {
       {mobileOpen && (
         <div
           ref={mobileMenuRef}
-          className="fixed top-0 right-0 z-50 flex h-full w-[280px] flex-col bg-white shadow-2xl lg:hidden"
+          className="fixed top-0 right-0 z-[70] flex h-full w-[280px] flex-col bg-white shadow-2xl lg:hidden"
           style={{ transform: 'translateX(100%)' }}
         >
           {/* Close button */}
@@ -380,7 +382,7 @@ export default function Navbar() {
           {/* Mobile CTA */}
           <div className="mt-auto border-t border-slate-100 p-4">
             <a
-              href="https://wa.me/6281234567890"
+              href="https://wa.me/6282227196772"
               target="_blank"
               rel="noopener noreferrer"
               className="flex w-full items-center justify-center gap-2 rounded-xl bg-brand-orange px-5 py-3 text-sm font-semibold text-white shadow-sm transition-all hover:bg-brand-orange-dark"
@@ -391,6 +393,6 @@ export default function Navbar() {
           </div>
         </div>
       )}
-    </header>
+    </>
   )
 }

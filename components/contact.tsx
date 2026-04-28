@@ -112,7 +112,7 @@ export default function Contact() {
     >
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         {/* Section Title */}
-        <div className="mx-auto mb-16 max-w-2xl text-center">
+        <div className="mx-auto mb-16 flex max-w-2xl flex-col items-center text-center">
           <p className="text-sm font-bold uppercase tracking-widest text-brand-orange">
             Kontak
           </p>

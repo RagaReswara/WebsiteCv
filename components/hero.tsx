@@ -159,9 +159,21 @@ export default function Hero() {
                 href="#proyek"
                 onClick={(e) => {
                   e.preventDefault()
-                  document
-                    .getElementById('proyek')
-                    ?.scrollIntoView({ behavior: 'smooth' })
+                  const id = 'proyek'
+                  const lenis = (window as any).__lenis
+                  if (lenis) {
+                    lenis.scrollTo(`#${id}`, {
+                      offset: -85,
+                      duration: 1.8,
+                      easing: (t: number) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+                    })
+                  } else {
+                    const target = document.getElementById(id)
+                    if (target) {
+                      const top = target.getBoundingClientRect().top + window.scrollY - 85
+                      window.scrollTo({ top, behavior: 'smooth' })
+                    }
+                  }
                 }}
                 className="inline-flex items-center gap-2 rounded-lg bg-brand-orange px-7 py-3.5 text-sm font-bold text-white shadow-lg shadow-brand-orange/20 transition-all hover:bg-brand-orange-dark hover:shadow-xl"
               >
@@ -169,7 +181,7 @@ export default function Hero() {
                 <ArrowRight className="h-4 w-4" />
               </a>
               <a
-                href="https://wa.me/6281234567890"
+                href="https://wa.me/6282227196772"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 rounded-lg border border-white/20 bg-white/10 px-7 py-3.5 text-sm font-semibold text-white backdrop-blur-sm transition-all hover:bg-white/20"
