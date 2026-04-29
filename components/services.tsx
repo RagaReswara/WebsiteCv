@@ -3,7 +3,7 @@
 import { useEffect, useRef } from 'react'
 import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
-import { Route, Mountain, Waves, Building2, Triangle, Wrench } from 'lucide-react'
+import { Route, Waves, Building2, Triangle, Wrench, Truck } from 'lucide-react'
 
 gsap.registerPlugin(ScrollTrigger)
 
@@ -13,12 +13,6 @@ const services = [
     title: 'Pengaspalan & Jalan Raya',
     description: 'Pengerjaan aspal hotmix dan penetrasi untuk jalan raya, jalan desa, dan akses lingkungan dengan kualitas material terjamin.',
     tags: ['Aspal Hotmix', 'Aspal Penetrasi', 'Corblok'],
-  },
-  {
-    icon: Mountain,
-    title: 'Infrastruktur & Pekerjaan Tanah',
-    description: 'Persiapan lahan menyeluruh mulai dari survey topografi, galian, pengurukan, hingga pemadatan tanah sesuai standar teknis.',
-    tags: ['Galian & Timbunan', 'Pemadatan Tanah', 'Survey Lahan'],
   },
   {
     icon: Waves,
@@ -43,6 +37,12 @@ const services = [
     title: 'Pemeliharaan & Perencanaan',
     description: 'Layanan end-to-end mulai dari penyusunan RAB & gambar desain, hingga perbaikan dan perawatan jalan (patching/resurfacing).',
     tags: ['Patching & Overlay', 'Pemeliharaan Jalan', 'RAB & Desain'],
+  },
+  {
+    icon: Truck,
+    title: 'Penyewaan Alat & Alat Berat',
+    description: 'Layanan sewa alat berat dan kendaraan operasional untuk mendukung kelancaran proyek konstruksi Anda dengan harga kompetitif.',
+    tags: ['Excavator', 'Towing', 'TW500 Sakai', 'Pickup', 'Genset'],
   },
 ]
 

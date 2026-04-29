@@ -78,13 +78,28 @@ export default function Contact() {
     return Object.keys(newErrors).length === 0
   }
 
-  const handleSubmit = async (e: React.FormEvent) => {
+  const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault()
     if (!validate()) return
 
     setLoading(true)
-    // Simulate submit
-    await new Promise((resolve) => setTimeout(resolve, 1500))
+
+    const waNumber = '6282142637499'
+    const text = [
+      `Halo CV Efata Jaya Truss,`,
+      ``,
+      `Perkenalkan, saya ${formData.name} ingin mengirimkan pesan:`,
+      ``,
+      `*No. Telepon:* ${formData.phone}`,
+      `*Email:* ${formData.email}`,
+      ``,
+      `*Pesan:*`,
+      formData.message,
+    ].join('\n')
+
+    const waUrl = `https://wa.me/${waNumber}?text=${encodeURIComponent(text)}`
+    window.open(waUrl, '_blank')
+
     setLoading(false)
     setSubmitted(true)
     setFormData({ name: '', phone: '', email: '', message: '' })
@@ -169,11 +184,10 @@ export default function Contact() {
                     value={formData.name}
                     onChange={handleChange}
                     placeholder="Masukkan nama Anda"
-                    className={`w-full rounded-lg border px-4 py-3 text-sm text-slate-900 placeholder:text-slate-400 transition-colors focus:outline-none focus:ring-2 focus:ring-brand-orange/30 focus:border-brand-orange ${
-                      errors.name
-                        ? 'border-red-400 bg-red-50'
-                        : 'border-slate-200 bg-white'
-                    }`}
+                    className={`w-full rounded-lg border px-4 py-3 text-sm text-slate-900 placeholder:text-slate-400 transition-colors focus:outline-none focus:ring-2 focus:ring-brand-orange/30 focus:border-brand-orange ${errors.name
+                      ? 'border-red-400 bg-red-50'
+                      : 'border-slate-200 bg-white'
+                      }`}
                   />
                   {errors.name && (
                     <p className="mt-1 text-xs text-red-500">{errors.name}</p>
@@ -195,11 +209,10 @@ export default function Contact() {
                     value={formData.phone}
                     onChange={handleChange}
                     placeholder="08xx-xxxx-xxxx"
-                    className={`w-full rounded-lg border px-4 py-3 text-sm text-slate-900 placeholder:text-slate-400 transition-colors focus:outline-none focus:ring-2 focus:ring-brand-orange/30 focus:border-brand-orange ${
-                      errors.phone
-                        ? 'border-red-400 bg-red-50'
-                        : 'border-slate-200 bg-white'
-                    }`}
+                    className={`w-full rounded-lg border px-4 py-3 text-sm text-slate-900 placeholder:text-slate-400 transition-colors focus:outline-none focus:ring-2 focus:ring-brand-orange/30 focus:border-brand-orange ${errors.phone
+                      ? 'border-red-400 bg-red-50'
+                      : 'border-slate-200 bg-white'
+                      }`}
                   />
                   {errors.phone && (
                     <p className="mt-1 text-xs text-red-500">{errors.phone}</p>
@@ -221,11 +234,10 @@ export default function Contact() {
                     value={formData.email}
                     onChange={handleChange}
                     placeholder="email@example.com"
-                    className={`w-full rounded-lg border px-4 py-3 text-sm text-slate-900 placeholder:text-slate-400 transition-colors focus:outline-none focus:ring-2 focus:ring-brand-orange/30 focus:border-brand-orange ${
-                      errors.email
-                        ? 'border-red-400 bg-red-50'
-                        : 'border-slate-200 bg-white'
-                    }`}
+                    className={`w-full rounded-lg border px-4 py-3 text-sm text-slate-900 placeholder:text-slate-400 transition-colors focus:outline-none focus:ring-2 focus:ring-brand-orange/30 focus:border-brand-orange ${errors.email
+                      ? 'border-red-400 bg-red-50'
+                      : 'border-slate-200 bg-white'
+                      }`}
                   />
                   {errors.email && (
                     <p className="mt-1 text-xs text-red-500">{errors.email}</p>
@@ -247,11 +259,10 @@ export default function Contact() {
                     value={formData.message}
                     onChange={handleChange}
                     placeholder="Ceritakan kebutuhan proyek Anda..."
-                    className={`w-full resize-none rounded-lg border px-4 py-3 text-sm text-slate-900 placeholder:text-slate-400 transition-colors focus:outline-none focus:ring-2 focus:ring-brand-orange/30 focus:border-brand-orange ${
-                      errors.message
-                        ? 'border-red-400 bg-red-50'
-                        : 'border-slate-200 bg-white'
-                    }`}
+                    className={`w-full resize-none rounded-lg border px-4 py-3 text-sm text-slate-900 placeholder:text-slate-400 transition-colors focus:outline-none focus:ring-2 focus:ring-brand-orange/30 focus:border-brand-orange ${errors.message
+                      ? 'border-red-400 bg-red-50'
+                      : 'border-slate-200 bg-white'
+                      }`}
                   />
                   {errors.message && (
                     <p className="mt-1 text-xs text-red-500">
@@ -293,7 +304,7 @@ export default function Contact() {
                   <p className="text-sm font-bold text-slate-900">Alamat</p>
                   <p className="mt-0.5 text-sm leading-relaxed text-slate-500">
                     Jl. Agrowisata Jl. Klelen Raya, Kloler, Trimulyo, Kec. Sleman, Kabupaten Sleman, Daerah Istimewa Yogyakarta
-                    <br/>
+                    <br />
                     55513
                   </p>
                 </div>

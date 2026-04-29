@@ -3,6 +3,7 @@ import Hero from '@/components/hero'
 import About from '@/components/about'
 import CompanyHistory from '@/components/company-history'
 import Services from '@/components/services'
+import EquipmentShowcase from '@/components/equipment-showcase'
 import Portfolio from '@/components/portfolio'
 import WhyChooseUs from '@/components/why-choose-us'
 import Testimonials from '@/components/testimonials'
@@ -22,6 +23,8 @@ export default function Home() {
       <CompanyHistory />
       <SectionDivider fromColor="#f1f5f9" toColor="#f8fafc" />
       <Services />
+      <SectionDivider fromColor="#f8fafc" toColor="#ffffff" />
+      <EquipmentShowcase />
       <Portfolio />
       <WhyChooseUs />
       <SectionDivider fromColor="#ffffff" toColor="#f1f5f9" />
