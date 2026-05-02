@@ -149,9 +149,9 @@ export default function CompanyData() {
               </div>
               <div className="flex flex-col gap-5">
                 {[
-                  { value: '15+', label: 'Tahun Pengalaman' },
-                  { value: '500+', label: 'Proyek Selesai' },
-                  { value: '200+', label: 'Klien Puas' },
+                  { value: '11+', label: 'Tahun Pengalaman' },
+                  { value: '200+', label: 'Proyek Selesai' },
+                  { value: '120+', label: 'Klien Puas' },
                 ].map((stat) => (
                   <div key={stat.label} className="flex items-center gap-4">
                     <p

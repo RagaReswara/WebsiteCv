@@ -134,9 +134,9 @@ export default function Hero() {
               className="flex flex-wrap items-center gap-10 opacity-0 lg:pt-2"
             >
               {[
-                { value: '15+', label: 'Tahun Pengalaman' },
-                { value: '500+', label: 'Proyek Selesai' },
-                { value: '200+', label: 'Klien Puas' },
+                { value: '11+', label: 'Tahun Pengalaman' },
+                { value: '200+', label: 'Proyek Selesai' },
+                { value: '120+', label: 'Klien Puas' },
               ].map((stat) => (
                 <div key={stat.label}>
                   <p

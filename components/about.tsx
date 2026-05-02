@@ -11,7 +11,7 @@ gsap.registerPlugin(ScrollTrigger)
 const highlights = [
   {
     icon: Award,
-    title: '15+ Tahun',
+    title: '11+ Tahun',
     description: 'Pengalaman di industri konstruksi & kontraktor',
   },
   {
@@ -165,7 +165,7 @@ export default function About() {
                   className="text-3xl font-extrabold text-brand-orange"
                   style={{ fontFamily: 'var(--font-heading)' }}
                 >
-                  500+
+                  200+
                 </p>
                 <p className="mt-1 text-sm font-medium text-slate-600">
                   Proyek Berhasil Diselesaikan

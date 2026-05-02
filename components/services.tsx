@@ -109,7 +109,7 @@ export default function Services() {
             Layanan Konstruksi & General Contractor
           </h2>
           <p className="mt-4 text-pretty text-base leading-relaxed text-slate-500">
-            Berbekal pengalaman dan portofolio yang luas, kami menyediakan layanan end-to-end 
+            Berbekal pengalaman dan portofolio yang luas, kami menyediakan layanan end-to-end
             dari perencanaan hingga pengerjaan akhir untuk segala kebutuhan konstruksi Anda.
           </p>
         </div>

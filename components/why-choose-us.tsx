@@ -3,7 +3,7 @@
 import { useEffect, useRef } from 'react'
 import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
-import { ShieldCheck, Clock, BadgeCheck, Headphones } from 'lucide-react'
+import { ShieldCheck, Clock, Users, Headphones } from 'lucide-react'
 
 gsap.registerPlugin(ScrollTrigger)
 
@@ -21,10 +21,10 @@ const benefits = [
       'Proses mobilisasi alat berat dan pengerjaan terorganisir memastikan proyek aspal Anda selesai tepat waktu.',
   },
   {
-    icon: BadgeCheck,
-    title: 'Garansi Resmi',
+    icon: Users,
+    title: 'Tenaga Ahli',
     description:
-      'Setiap proyek dilengkapi garansi resmi atas kualitas material aspal dan pengerjaan untuk ketenangan Anda.',
+      'Didukung oleh tim profesional dan pekerja berpengalaman di bidang konstruksi aspal untuk menjamin hasil yang rapi dan tahan lama.',
   },
   {
     icon: Headphones,

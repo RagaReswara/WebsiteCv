@@ -61,9 +61,11 @@ export default function Testimonials() {
 
   // Auto-advance carousel
   useEffect(() => {
-    const interval = setInterval(next, 5000)
-    return () => clearInterval(interval)
-  }, [next])
+    const timer = setTimeout(() => {
+      setCurrent((prev) => (prev + 1) % testimonials.length)
+    }, 5000)
+    return () => clearTimeout(timer)
+  }, [current])
 
   useEffect(() => {
     const ctx = gsap.context(() => {

@@ -13,7 +13,7 @@ const milestones = [
     year: 'Awal Berdiri',
     title: 'Lahir dari Semangat Membangun',
     description:
-      'CV Efata Jaya Truss bermula dari usaha perorangan di bidang konstruksi rangka atap dari bambu dan bangunan bambu — cikal bakal semangat membangun yang tak pernah padam dan terus berkembang hingga hari ini.',
+      'CV Efata Jaya Truss bermula dari usaha perorangan di bidang konstruksi rangka atap dari bambu dan bangunan bambu cikal bakal semangat membangun yang tak pernah padam dan terus berkembang hingga hari ini.',
     image: '/images/project-1.jpg',
     accent: true,
   },
@@ -27,9 +27,9 @@ const milestones = [
   },
   {
     year: '2014',
-    title: 'Merek "Efata Truss" Dikenal Luas',
+    title: 'Merek "Efata Jaya Truss" Dikenal Luas',
     description:
-      'Nama "Efata Truss" mulai dikenal di Yogyakarta. Dari proyek rumah tinggal, pendopo, hingga gereja — kepercayaan klien terus bertumbuh. Reputasi kami dibangun satu proyek berkualitas demi satu proyek berkualitas.',
+      'Nama "Efata Truss" mulai dikenal di Yogyakarta. Dari proyek rumah tinggal, pendopo, hingga gereja kepercayaan klien terus bertumbuh. Reputasi kami dibangun satu proyek berkualitas demi satu proyek berkualitas.',
     image: '/images/project-3.jpg',
     accent: false,
   },
@@ -37,7 +37,7 @@ const milestones = [
     year: '2018',
     title: 'Bermitra dengan Pemerintah',
     description:
-      'Tonggak bersejarah: kami mulai mengerjakan proyek-proyek pemerintah desa — pengaspalan jalan, pembangunan talud, corblok, dan irigasi. Kepercayaan pemerintah kepada kami adalah bukti nyata kualitas yang tak perlu diragukan.',
+      'Tonggak bersejarah: kami mulai mengerjakan proyek-proyek pemerintah desa pengaspalan jalan, pembangunan talud, corblok, dan irigasi. Kepercayaan pemerintah kepada kami adalah bukti nyata kualitas yang tak perlu diragukan.',
     image: '/images/project-4.jpg',
     accent: false,
   },
