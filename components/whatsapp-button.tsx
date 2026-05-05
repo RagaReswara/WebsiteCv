@@ -17,7 +17,7 @@ export default function WhatsAppButton() {
   return (
     <a
       ref={buttonRef}
-      href="https://wa.me/6281234567890?text=Halo%2C%20saya%20tertarik%20dengan%20jasa%20truss%20baja%20Efata%20Jaya."
+      href="https://wa.me/6282227196772?text=Halo%2C%20saya%20tertarik%20dengan%20jasa%20truss%20baja%20Efata%20Jaya."
       target="_blank"
       rel="noopener noreferrer"
       aria-label="Chat via WhatsApp"

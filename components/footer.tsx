@@ -139,14 +139,6 @@ export default function Footer() {
                 <Phone className="mt-0.5 h-4 w-4 shrink-0 text-brand-orange" />
                 <div className="flex flex-col gap-1 text-sm text-slate-400">
                   <a
-                    href="https://wa.me/6285868426690"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="transition-colors hover:text-brand-orange hover:underline"
-                  >
-                    +62 858-6842-6690
-                  </a>
-                  <a
                     href="https://wa.me/6282227196772"
                     target="_blank"
                     rel="noopener noreferrer"
@@ -175,7 +167,7 @@ export default function Footer() {
             {'© 2026 CV Efata Jaya Truss. Seluruh hak dilindungi.'}
           </p>
           <a
-            href="https://wa.me/6281234567890"
+            href="https://wa.me/6282227196772"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 rounded-lg bg-brand-orange px-5 py-2.5 text-sm font-semibold text-white transition-all hover:bg-brand-orange-dark"

@@ -317,20 +317,20 @@ export default function Contact() {
                 <div>
                   <p className="text-sm font-bold text-slate-900">Telepon / WhatsApp</p>
                   <a
-                    href="https://wa.me/6285868426690"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="mt-0.5 block text-sm text-brand-orange hover:underline"
-                  >
-                    +62 858-6842-6690
-                  </a>
-                  <a
                     href="https://wa.me/6282227196772"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="mt-0.5 block text-sm text-brand-orange hover:underline"
                   >
                     +62 822-2719-6772
+                  </a>
+                  <a
+                    href="https://wa.me/6282135626937"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="mt-0.5 block text-sm text-brand-orange hover:underline"
+                  >
+                    +62 821-3562-6937
                   </a>
                 </div>
               </div>
