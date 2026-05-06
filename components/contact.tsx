@@ -109,7 +109,25 @@ export default function Contact() {
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
   ) => {
     const { name, value } = e.target
-    setFormData((prev) => ({ ...prev, [name]: value }))
+    let filtered = value
+
+    switch (name) {
+      case 'name':
+        // Only allow letters, spaces, periods, and apostrophes
+        filtered = value.replace(/[^a-zA-Z\s.']/g, '')
+        break
+      case 'phone':
+        // Only allow digits, +, -, (, ), and spaces
+        filtered = value.replace(/[^\d+\-() ]/g, '')
+        break
+      case 'email':
+        // No spaces allowed in email
+        filtered = value.replace(/\s/g, '')
+        break
+      // 'message' has no filter — free text
+    }
+
+    setFormData((prev) => ({ ...prev, [name]: filtered }))
     if (errors[name]) {
       setErrors((prev) => {
         const next = { ...prev }
