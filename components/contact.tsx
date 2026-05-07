@@ -343,12 +343,12 @@ export default function Contact() {
                     +62 822-2719-6772
                   </a>
                   <a
-                    href="https://wa.me/6282135626937"
+                    href="https://wa.me/6282138906449"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="mt-0.5 block text-sm text-brand-orange hover:underline"
                   >
-                    +62 821-3562-6937
+                    +62 821-3890-6449
                   </a>
                 </div>
               </div>
@@ -360,10 +360,10 @@ export default function Contact() {
                 <div>
                   <p className="text-sm font-bold text-slate-900">Email</p>
                   <a
-                    href="mailto:info@efatajayatruss.com"
+                    href="mailto:efatajaya58@gmail.com"
                     className="mt-0.5 block text-sm text-brand-orange hover:underline"
                   >
-                    info@efatajayatruss.com
+                    efatajaya58@gmail.com
                   </a>
                 </div>
               </div>

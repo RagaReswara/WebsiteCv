@@ -146,15 +146,23 @@ export default function Footer() {
                   >
                     +62 822-2719-6772
                   </a>
+                  <a
+                    href="https://wa.me/6282138906449"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="transition-colors hover:text-brand-orange hover:underline"
+                  >
+                    +62 821-3890-6449
+                  </a>
                 </div>
               </li>
               <li>
                 <a
-                  href="mailto:info@efatajayatruss.com"
+                  href="mailto:efatajaya58@gmail.com"
                   className="flex items-center gap-3 text-sm text-slate-400 transition-colors hover:text-brand-orange"
                 >
                   <Mail className="h-4 w-4 shrink-0 text-brand-orange" />
-                  info@efatajayatruss.com
+                  efatajaya58@gmail.com
                 </a>
               </li>
             </ul>

@@ -88,10 +88,11 @@ export default function Hero() {
           alt="Proyek pengaspalan jalan"
           fill
           className="object-cover"
+          style={{ filter: 'saturate(1.4) contrast(1.15) brightness(1.05)' }}
           priority
           sizes="100vw"
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-brand-brown/90 via-brand-brown/70 to-brand-brown/30" />
+        <div className="absolute inset-0 bg-gradient-to-r from-brand-brown/95 via-brand-brown/85 to-brand-brown/50" />
       </div>
 
       <div className="relative mx-auto w-full max-w-7xl px-6 pb-24 pt-32 lg:px-8 lg:pt-44">

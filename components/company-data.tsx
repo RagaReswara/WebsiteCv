@@ -10,7 +10,7 @@ gsap.registerPlugin(ScrollTrigger)
 const companyInfo = [
   { label: 'Nama Perusahaan', value: 'CV Efata Jaya Truss' },
   { label: 'Alamat', value: 'JL Agrowisata, Klelen Rt 04, Trimulyo, Kec. Sleman, Yogyakarta 55513' },
-  { label: 'Nomor Telepon', value: '0821 3890 6449 / 0858 6842 6690' },
+  { label: 'Nomor Telepon', value: '0821 3890 6449 / 0822 2719 6772' },
   { label: 'Email', value: 'efatajaya58@gmail.com' },
   { label: 'Akta Pendirian', value: 'No. 13, Tanggal 30 Juni 2020' },
   { label: 'SK Kemenkumham', value: 'No. AHU-0038124-AH.01.15 Tahun 2020' },

@@ -1,17 +1,20 @@
+import dynamic from 'next/dynamic'
 import Navbar from '@/components/navbar'
 import Hero from '@/components/hero'
-import About from '@/components/about'
-import CompanyHistory from '@/components/company-history'
-import Services from '@/components/services'
-import EquipmentShowcase from '@/components/equipment-showcase'
-import Portfolio from '@/components/portfolio'
-import WhyChooseUs from '@/components/why-choose-us'
-import Testimonials from '@/components/testimonials'
-import CompanyData from '@/components/company-data'
-import Contact from '@/components/contact'
-import Footer from '@/components/footer'
-import WhatsAppButton from '@/components/whatsapp-button'
 import SectionDivider from '@/components/section-divider'
+
+// Lazy load components that are below the fold to drastically reduce initial JS payload
+const About = dynamic(() => import('@/components/about'))
+const CompanyHistory = dynamic(() => import('@/components/company-history'))
+const Services = dynamic(() => import('@/components/services'))
+const EquipmentShowcase = dynamic(() => import('@/components/equipment-showcase'))
+const Portfolio = dynamic(() => import('@/components/portfolio'))
+const WhyChooseUs = dynamic(() => import('@/components/why-choose-us'))
+const Testimonials = dynamic(() => import('@/components/testimonials'))
+const CompanyData = dynamic(() => import('@/components/company-data'))
+const Contact = dynamic(() => import('@/components/contact'))
+const Footer = dynamic(() => import('@/components/footer'))
+const WhatsAppButton = dynamic(() => import('@/components/whatsapp-button'))
 
 export default function Home() {
   return (
