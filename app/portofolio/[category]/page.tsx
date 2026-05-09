@@ -112,7 +112,7 @@ export default function PortfolioCategory() {
 
       {/* Title Section */}
       <div className="mx-auto max-w-7xl px-6 pt-16 pb-8 lg:px-8">
-        <div ref={titleRef} className="mx-auto max-w-2xl text-center opacity-0">
+        <div ref={titleRef} className="mx-auto flex max-w-2xl flex-col items-center text-center opacity-0">
           <p className="text-sm font-bold uppercase tracking-widest text-brand-orange">
             Portofolio
           </p>
@@ -136,11 +136,10 @@ export default function PortfolioCategory() {
                 <button
                   key={cat}
                   onClick={() => router.push(`/portofolio/${categoryToSlug(cat)}`)}
-                  className={`cursor-pointer rounded-xl px-5 py-2.5 text-sm font-medium transition-all duration-300 ${
-                    cat === category
-                      ? 'bg-brand-orange text-white shadow-lg shadow-brand-orange/25'
-                      : 'text-slate-300 hover:bg-white/5 hover:text-white'
-                  }`}
+                  className={`cursor-pointer rounded-xl px-5 py-2.5 text-sm font-medium transition-all duration-300 ${cat === category
+                    ? 'bg-brand-orange text-white shadow-lg shadow-brand-orange/25'
+                    : 'text-slate-300 hover:bg-white/5 hover:text-white'
+                    }`}
                 >
                   {cat}
                 </button>
@@ -184,26 +183,7 @@ export default function PortfolioCategory() {
           ))}
         </div>
 
-        {/* Other categories */}
-        <div className="mt-20 border-t border-white/10 pt-12">
-          <h2
-            className="text-center text-xl font-bold text-white"
-            style={{ fontFamily: 'var(--font-heading)' }}
-          >
-            Lihat Kategori Lainnya
-          </h2>
-          <div className="mt-6 flex flex-wrap justify-center gap-3">
-            {otherCategories.map((cat) => (
-              <Link
-                key={cat}
-                href={`/portofolio/${categoryToSlug(cat)}`}
-                className="rounded-xl border border-white/15 px-6 py-3 text-sm font-medium text-slate-300 transition-all duration-300 hover:border-brand-orange hover:bg-brand-orange/10 hover:text-brand-orange"
-              >
-                {cat}
-              </Link>
-            ))}
-          </div>
-        </div>
+
       </div>
 
       {/* Lightbox */}

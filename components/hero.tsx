@@ -113,8 +113,6 @@ export default function Hero() {
           >
             <span className="text-brand-orange">Satu Mitra</span>{' '}
             untuk Semua Kebutuhan Proyek Anda
-            <br />
-            di Yogyakarta
           </h1>
         </div>
 

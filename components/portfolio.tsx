@@ -10,11 +10,12 @@ import { categories, projects, categoryToSlug, type Category } from '@/lib/proje
 gsap.registerPlugin(ScrollTrigger)
 
 const categoryButtonLabels: Record<Exclude<Category, 'All'>, string> = {
-  'Jalan & Aspal': 'Lihat Proyek Jalan',
-  'Talud & Drainase': 'Lihat Proyek Talud',
+  'Aspal': 'Lihat Proyek Aspal',
+  'Talud': 'Lihat Proyek Talud',
+  'Drainase': 'Lihat Proyek Drainase',
   'Perataan Tanah': 'Lihat Proyek Tanah',
   'Bangunan': 'Lihat Proyek Bangunan',
-  'Atap & Baja': 'Lihat Proyek Atap',
+  'Rangka Atap': 'Lihat Proyek Atap',
   'Pagar & Komersial': 'Lihat Proyek Pagar',
 }
 
@@ -133,11 +134,10 @@ export default function Portfolio() {
               <button
                 key={cat}
                 onClick={() => handleFilter(cat)}
-                className={`rounded-xl px-5 py-2.5 text-sm font-medium transition-all duration-300 cursor-pointer ${
-                  activeCategory === cat
-                    ? 'bg-brand-orange text-white shadow-lg shadow-brand-orange/25'
-                    : 'text-slate-300 hover:bg-white/5 hover:text-white'
-                }`}
+                className={`rounded-xl px-5 py-2.5 text-sm font-medium transition-all duration-300 cursor-pointer ${activeCategory === cat
+                  ? 'bg-brand-orange text-white shadow-lg shadow-brand-orange/25'
+                  : 'text-slate-300 hover:bg-white/5 hover:text-white'
+                  }`}
               >
                 {cat}
               </button>

@@ -1,4 +1,4 @@
-export const categories = ['All', 'Jalan & Aspal', 'Talud & Drainase', 'Perataan Tanah', 'Bangunan', 'Atap & Baja', 'Pagar & Komersial'] as const
+export const categories = ['All', 'Aspal', 'Talud', 'Drainase', 'Perataan Tanah', 'Bangunan', 'Rangka Atap', 'Pagar & Komersial'] as const
 
 export type Category = (typeof categories)[number]
 
@@ -16,22 +16,29 @@ export const projects: Project[] = [
     src: '/images/project-1.jpg',
     alt: 'Pengaspalan hotmix jalan raya',
     label: 'Pengaspalan Hotmix Jalan Raya',
-    category: 'Jalan & Aspal',
+    category: 'Aspal',
     type: 'Pengaspalan Hotmix',
   },
   {
     src: '/images/project-2.jpg',
     alt: 'Pemasangan paving dan corblok',
     label: 'Pemasangan Paving & Corblok',
-    category: 'Jalan & Aspal',
+    category: 'Aspal',
     type: 'Paving & Corblok',
   },
   {
     src: '/images/project-3.jpg',
     alt: 'Pembangunan talud penahan tanah',
     label: 'Pembangunan Talud Penahan Tanah',
-    category: 'Talud & Drainase',
+    category: 'Talud',
     type: 'Talud & Irigasi',
+  },
+  {
+    src: '/images/project-9.jpg',
+    alt: 'Sistem drainase kawasan',
+    label: 'Sistem Drainase Kawasan',
+    category: 'Drainase',
+    type: 'Sistem Drainase',
   },
   {
     src: '/images/project-4.jpg',
@@ -51,15 +58,15 @@ export const projects: Project[] = [
     src: '/images/project-6.jpg',
     alt: 'Pemasangan rangka baja ringan atap',
     label: 'Pemasangan Rangka Baja Ringan',
-    category: 'Atap & Baja',
+    category: 'Rangka Atap',
     type: 'Rangka Baja Ringan',
   },
 ]
 
 // Data galeri lengkap per kategori (untuk halaman detail portofolio)
 export const galleryData: Record<Exclude<Category, 'All'>, { title: string; description: string; images: { src: string; alt: string }[] }> = {
-  'Jalan & Aspal': {
-    title: 'Proyek Jalan & Aspal',
+  'Aspal': {
+    title: 'Proyek Aspal',
     description: 'Dokumentasi proyek pengaspalan hotmix, penetrasi jalan, pemasangan paving dan corblok yang telah kami kerjakan.',
     images: [
       { src: '/images/project-1.jpg', alt: 'Pengaspalan hotmix jalan raya' },
@@ -67,11 +74,17 @@ export const galleryData: Record<Exclude<Category, 'All'>, { title: string; desc
       { src: '/images/project-7.jpg', alt: 'Penetrasi jalan desa' },
     ],
   },
-  'Talud & Drainase': {
-    title: 'Proyek Talud & Drainase',
-    description: 'Dokumentasi proyek pembangunan talud penahan tanah, irigasi, drainase, dan sumur resapan.',
+  'Talud': {
+    title: 'Proyek Talud',
+    description: 'Dokumentasi proyek pembangunan talud penahan tanah.',
     images: [
       { src: '/images/project-3.jpg', alt: 'Pembangunan talud penahan tanah' },
+    ],
+  },
+  'Drainase': {
+    title: 'Proyek Drainase',
+    description: 'Dokumentasi proyek pembangunan saluran irigasi, drainase kawasan, dan sumur resapan.',
+    images: [
       { src: '/images/project-8.jpg', alt: 'Pembangunan saluran irigasi' },
       { src: '/images/project-9.jpg', alt: 'Sistem drainase kawasan' },
     ],
@@ -93,7 +106,7 @@ export const galleryData: Record<Exclude<Category, 'All'>, { title: string; desc
       { src: '/images/project-12.jpg', alt: 'Pembangunan gedung pertemuan' },
     ],
   },
-  'Atap & Baja': {
+  'Rangka Atap': {
     title: 'Proyek Konstruksi Atap & Rangka Baja',
     description: 'Dokumentasi proyek pemasangan rangka baja ringan, roof covering, dan plafon PVC untuk berbagai bangunan.',
     images: [
@@ -120,11 +133,12 @@ export function categoryToSlug(category: string): string {
 // Helper: convert URL slug back to category name
 export function slugToCategory(slug: string): Exclude<Category, 'All'> | null {
   const map: Record<string, Exclude<Category, 'All'>> = {
-    'jalan-dan-aspal': 'Jalan & Aspal',
-    'talud-dan-drainase': 'Talud & Drainase',
+    'aspal': 'Aspal',
+    'talud': 'Talud',
+    'drainase': 'Drainase',
     'perataan-tanah': 'Perataan Tanah',
     'bangunan': 'Bangunan',
-    'atap-dan-baja': 'Atap & Baja',
+    'rangka-atap': 'Rangka Atap',
     'pagar-dan-komersial': 'Pagar & Komersial',
   }
   return map[slug] || null
