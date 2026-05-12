@@ -14,17 +14,24 @@ export interface Project {
 export const projects: Project[] = [
   {
     src: '/images/project-1.jpg',
-    alt: 'Pengaspalan hotmix jalan raya',
-    label: 'Pengaspalan Hotmix Jalan Raya',
+    alt: 'Proses penghamparan aspal hotmix jalan desa',
+    label: 'Penghamparan Aspal Hotmix',
     category: 'Aspal',
     type: 'Pengaspalan Hotmix',
   },
   {
     src: '/images/project-2.jpg',
-    alt: 'Pemasangan paving dan corblok',
-    label: 'Pemasangan Paving & Corblok',
+    alt: 'Pemadatan aspal dengan mesin roller SAKAI',
+    label: 'Pemadatan Aspal dengan Roller',
     category: 'Aspal',
-    type: 'Paving & Corblok',
+    type: 'Pemadatan Aspal',
+  },
+  {
+    src: '/images/project-7.jpg',
+    alt: 'Proses pengaspalan jalan dengan finisher dan pekerja',
+    label: 'Pengaspalan Jalan dengan Finisher',
+    category: 'Aspal',
+    type: 'Pengaspalan Jalan',
   },
   {
     src: '/images/project-3.jpg',
@@ -67,11 +74,15 @@ export const projects: Project[] = [
 export const galleryData: Record<Exclude<Category, 'All'>, { title: string; description: string; images: { src: string; alt: string }[] }> = {
   'Aspal': {
     title: 'Proyek Aspal',
-    description: 'Dokumentasi proyek pengaspalan hotmix, penetrasi jalan, pemasangan paving dan corblok yang telah kami kerjakan.',
+    description: 'Dokumentasi proyek pengaspalan hotmix, pemadatan jalan, dan penghamparan aspal yang telah kami kerjakan.',
     images: [
-      { src: '/images/project-1.jpg', alt: 'Pengaspalan hotmix jalan raya' },
-      { src: '/images/project-2.jpg', alt: 'Pemasangan paving dan corblok' },
-      { src: '/images/project-7.jpg', alt: 'Penetrasi jalan desa' },
+      { src: '/images/project-1.jpg', alt: 'Penghamparan aspal hotmix jalan desa' },
+      { src: '/images/project-2.jpg', alt: 'Pemadatan aspal dengan mesin roller SAKAI' },
+      { src: '/images/project-7.jpg', alt: 'Pengaspalan jalan dengan finisher dan pekerja' },
+      { src: '/images/aspal-4.jpg', alt: 'Pengaspalan jalan malam hari dengan finisher' },
+      { src: '/images/aspal-5.jpg', alt: 'Mobilisasi alat berat finisher di malam hari' },
+      { src: '/images/aspal-6.jpg', alt: 'Proses penghamparan aspal siang hari dengan tim pekerja' },
+      { src: '/images/aspal-7.jpg', alt: 'Pemadatan aspal dengan roller SAKAI di area tembok' },
     ],
   },
   'Talud': {

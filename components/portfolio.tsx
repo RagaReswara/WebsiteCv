@@ -100,8 +100,8 @@ export default function Portfolio() {
 
   const filteredProjects =
     activeCategory === 'All'
-      ? projects
-      : projects.filter((p) => p.category === activeCategory)
+      ? projects.slice(0, 9)
+      : projects.filter((p) => p.category === activeCategory).slice(0, 3)
 
   return (
     <section
