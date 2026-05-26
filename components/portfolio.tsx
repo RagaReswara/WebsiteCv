@@ -14,9 +14,9 @@ const categoryButtonLabels: Record<Exclude<Category, 'All'>, string> = {
   'Talud': 'Lihat Proyek Talud',
   'Drainase': 'Lihat Proyek Drainase',
   'Perataan Tanah': 'Lihat Proyek Tanah',
-  'Bangunan': 'Lihat Proyek Bangunan',
+  'Cor Beton': 'Lihat Proyek Cor Beton',
   'Rangka Atap': 'Lihat Proyek Atap',
-  'Pagar & Komersial': 'Lihat Proyek Pagar',
+  'Proyek Lainnya': 'Lihat Proyek Lainnya',
 }
 
 export default function Portfolio() {

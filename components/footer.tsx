@@ -22,7 +22,7 @@ const serviceLinks = [
   'Survey & Perencanaan',
   'Area Parkir & Halaman',
   'Pemeliharaan Jalan',
-  'Konstruksi Baja (Sampingan)',
+  'Konstruksi Baja',
 ]
 
 export default function Footer() {
