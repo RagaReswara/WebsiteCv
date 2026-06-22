@@ -84,7 +84,7 @@ export default function Contact() {
 
     setLoading(true)
 
-    const waNumber = '6282142637499'
+    const waNumber = '6282227196772'
     const text = [
       `Halo CV Efata Jaya Truss,`,
       ``,

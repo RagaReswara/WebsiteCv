@@ -13,8 +13,8 @@ const milestones = [
     year: 'Awal Berdiri',
     title: 'Lahir dari Semangat Membangun',
     description:
-      'CV Efata Jaya Truss bermula dari usaha perorangan di bidang konstruksi rangka atap dari bambu dan bangunan bambu cikal bakal semangat membangun yang tak pernah padam dan terus berkembang hingga hari ini.',
-    image: '/images/project-1.jpg',
+      'CV Efata Jaya Truss bermula dari usaha perorangan di bidang konstruksi rangka atap dari bambu dan bangunan bambu menjadi cikal bakal semangat membangun yang tak pernah padam dan terus berkembang hingga hari ini.',
+    image: '/images/rangka-proses-1.jpg',
     accent: true,
   },
   {
@@ -22,7 +22,7 @@ const milestones = [
     title: 'Inovasi ke Baja Ringan & Plafon PVC',
     description:
       'Merespons kebutuhan pasar yang terus berkembang, kami mulai mengadopsi material baja ringan dan plafon PVC. Langkah berani ini membuka babak baru kapasitas layanan kami yang lebih modern dan kompetitif.',
-    image: '/images/project-2.jpg',
+    image: '/images/project-9.jpg',
     accent: false,
   },
   {
@@ -30,7 +30,7 @@ const milestones = [
     title: 'Merek "Efata Jaya Truss" Dikenal Luas',
     description:
       'Nama "Efata Truss" mulai dikenal di Yogyakarta. Dari proyek rumah tinggal, pendopo, hingga gereja kepercayaan klien terus bertumbuh. Reputasi kami dibangun satu proyek berkualitas demi satu proyek berkualitas.',
-    image: '/images/project-3.jpg',
+    image: '/images/project-5.jpg',
     accent: false,
   },
   {
@@ -38,7 +38,7 @@ const milestones = [
     title: 'Bermitra dengan Pemerintah',
     description:
       'Tonggak bersejarah: kami mulai mengerjakan proyek-proyek pemerintah desa pengaspalan jalan, pembangunan talud, corblok, dan irigasi. Kepercayaan pemerintah kepada kami adalah bukti nyata kualitas yang tak perlu diragukan.',
-    image: '/images/project-4.jpg',
+    image: '/images/project-1.jpg',
     accent: false,
   },
   {
@@ -46,7 +46,7 @@ const milestones = [
     title: 'Resmi Berbadan Hukum sebagai CV',
     description:
       'Dengan Akta Pendirian No. 13 tanggal 30 Juni 2020 dan SK Kemenkumham No. AHU-0038124-AH.01.15, CV Efata Jaya Truss resmi berbadan hukum. Fondasi legal yang kuat untuk melayani proyek yang lebih besar dan lebih ambisius.',
-    image: '/images/project-5.jpg',
+    image: '/images/project-8.jpg',
     accent: true,
   },
 ]
