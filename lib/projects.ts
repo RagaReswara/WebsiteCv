@@ -117,24 +117,26 @@ export const projects: Project[] = [
 export const galleryData: Record<Exclude<Category, 'All'>, { title: string; description: string; images: { src: string; alt: string; section?: string }[]; progressGroups?: ProgressGroup[] }> = {
   'Aspal': {
     title: 'Proyek Aspal',
-    description: 'Dokumentasi proyek pengaspalan hotmix, pemadatan jalan, dan penghamparan aspal yang telah kami kerjakan.',
+    description: '',
     images: [
       { src: '/images/project-1.jpg', alt: 'Penghamparan aspal hotmix jalan desa' },
-      { src: '/images/project-2.jpg', alt: 'Pemadatan aspal dengan mesin roller' },
       { src: '/images/project-7.jpg', alt: 'Pengaspalan jalan dengan finisher dan pekerja' },
-      { src: '/images/aspal-4.jpg', alt: 'Pengaspalan jalan malam hari dengan finisher' },
       { src: '/images/aspal-5.jpg', alt: 'Mobilisasi alat berat finisher di malam hari' },
-      { src: '/images/aspal-6.jpg', alt: 'Proses penghamparan aspal siang hari dengan tim pekerja' },
-      { src: '/images/aspal-7.jpg', alt: 'Pemadatan aspal dengan roller' },
-      { src: '/images/aspal-8.jpg', alt: 'Proses perataan aspal hotmix di area pemukiman warga' },
-      { src: '/images/aspal-9.jpg', alt: 'Tim pekerja melakukan penghamparan aspal jalan desa' },
-      { src: '/images/aspal-10.jpg', alt: 'Pekerja merapikan pengaspalan jalan perkotaan' },
       { src: '/images/aspal-11.jpg', alt: 'Penyemprotan lapis perekat (prime coat) cairan aspal' },
+      { src: '/images/aspal-new-1.jpg', alt: 'Proses Truk dump menuangkan material aspal hotmix ke dalam mesin finisher' },
+      { src: '/images/aspal-new-2.jpg', alt: 'Pemadatan aspal hotmix menggunakan mesin roller di jalan pedesaan' },
+      { src: '/images/aspal-new-3.jpg', alt: 'Proses penghamparan aspal menggunakan mesin finisher' },
+      { src: '/images/aspal-new-4.jpg', alt: 'Penghamparan aspal dari sudut belakang dengan pekerja yang sedang meratakan aspal' },
+      { src: '/images/aspal-new-5.jpg', alt: 'Pekerja menyemprot pelumas pada bagian roda crawler finisher aspal' },
+      { src: '/images/aspal-new-6.jpg', alt: 'Detail proses pengaspalan jalan dengan finisher' },
+      { src: '/images/aspal-new-7.jpg', alt: 'Alat berat finisher CAT dan roller SAKAI bekerja bersama menyelesaikan pengaspalan jalan' },
+      { src: '/images/aspal-new-8.jpg', alt: 'Kemudi dan operator di atas mesin finisher CAT yang terisi material aspal hotmix' },
+      { src: '/images/aspal-new-9.jpg', alt: 'Proses finisihing dan penataan pinggiran jalan aspal' },
     ],
   },
   'Talud': {
     title: 'Proyek Talud & Irigasi',
-    description: 'Dokumentasi proyek pembangunan talud penahan tanah serta sistem saluran irigasi beton.',
+    description: '',
     images: [
       { src: '/images/talud-2.jpg', alt: 'Persiapan material batu sungai dan pengerjaan pondasi talud', section: 'Konstruksi Talud Penahan Tanah' },
       { src: '/images/talud-3.jpg', alt: 'Struktur dinding talud penahan tanah di samping lahan pertanian', section: 'Konstruksi Talud Penahan Tanah' },
@@ -148,7 +150,7 @@ export const galleryData: Record<Exclude<Category, 'All'>, { title: string; desc
   },
   'Drainase': {
     title: 'Proyek Drainase',
-    description: 'Dokumentasi proyek pembangunan saluran drainase air, gorong-gorong beton, dan sumur resapan.',
+    description: '',
     images: [
       { src: '/images/drainase-1.jpg', alt: 'Pemasangan buis beton dan pengerjaan drainase air desa' },
       { src: '/images/drainase-2.jpg', alt: 'Konstruksi gorong-gorong dan pipa drainase bawah tanah' },
@@ -157,7 +159,7 @@ export const galleryData: Record<Exclude<Category, 'All'>, { title: string; desc
   },
   'Perataan Tanah': {
     title: 'Proyek Perataan & Pemadatan Tanah',
-    description: 'Dokumentasi proyek perataan lahan, pengurukan, dan pemadatan tanah untuk persiapan pembangunan.',
+    description: '',
     images: [
       { src: '/images/perataan-1.jpg', alt: 'Perataan jalan desa menggunakan excavator' },
       { src: '/images/perataan-2.jpg', alt: 'Pekerjaan pengurukan dan pemadatan tanah lahan proyek' },
@@ -165,7 +167,7 @@ export const galleryData: Record<Exclude<Category, 'All'>, { title: string; desc
   },
   'Cor Beton': {
     title: 'Proyek Cor Beton',
-    description: 'Dokumentasi proyek pengecoran jalan beton (corblok), pelataran, halaman, dan konstruksi cor beton lainnya.',
+    description: '',
     images: [
       { src: '/images/cor-beton-1.jpg', alt: 'Penuangan beton segar dari truk molen ke jalan desa' },
       { src: '/images/cor-beton-2.jpg', alt: 'Perataan dan finishing permukaan cor beton jalan kampung' },
@@ -174,14 +176,14 @@ export const galleryData: Record<Exclude<Category, 'All'>, { title: string; desc
   },
   'Rangka Atap': {
     title: 'Proyek Konstruksi Atap & Rangka Baja',
-    description: 'Dokumentasi proyek pemasangan rangka baja ringan, roof covering, dan plafon PVC untuk berbagai bangunan.',
+    description: '',
     images: [
 
     ],
     progressGroups: [
       {
         title: 'Renovasi Atap & Plafon Gedung',
-        description: 'Proses renovasi total atap dan pemasangan plafon PVC dekoratif pada gedung serbaguna.',
+        description: '',
         thumbnail: '/images/rangka-hasil-1.jpg',
         phases: [
           /*
@@ -210,8 +212,8 @@ export const galleryData: Record<Exclude<Category, 'All'>, { title: string; desc
     ],
   },
   'Proyek Lainnya': {
-    title: 'Proyek Lainnya & Pagar',
-    description: 'Dokumentasi berbagai proyek pembuatan pagar rumah, pagar kantor, serta infrastruktur pendukung lainnya.',
+    title: 'Proyek Lainnya',
+    description: '',
     images: [
       { src: '/images/lainnya-3.jpg', alt: 'Pekerjaan galian tanah untuk pembuatan sumur resapan' },
       { src: '/images/lainnya-4.jpg', alt: 'Pemasangan buis beton modular untuk konstruksi sumur resapan' },

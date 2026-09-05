@@ -125,12 +125,12 @@ export default function Testimonials() {
     <section ref={sectionRef} className="py-24 lg:py-32 bg-slate-100">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         {/* Section Title */}
-        <div ref={titleRef} className="mx-auto flex max-w-2xl flex-col items-center text-center opacity-0">
+        <div ref={titleRef} className="mx-auto flex max-w-4xl flex-col items-center text-center opacity-0">
           <p className="text-sm font-bold uppercase tracking-widest text-brand-orange">
             Testimoni
           </p>
           <h2
-            className="mt-3 text-balance text-3xl font-extrabold tracking-tight text-slate-900 sm:text-4xl"
+            className="mt-3 whitespace-nowrap text-3xl font-extrabold tracking-tight text-slate-900 sm:text-4xl"
             style={{ fontFamily: 'var(--font-heading)' }}
           >
             Apa Kata Klien Kami

@@ -68,20 +68,16 @@ export default function CompanyData() {
     >
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         {/* Section Title */}
-        <div ref={titleRef} className="mx-auto flex max-w-2xl flex-col items-center text-center opacity-0">
+        <div ref={titleRef} className="mx-auto flex max-w-4xl flex-col items-center text-center opacity-0">
           <p className="text-sm font-bold uppercase tracking-widest text-brand-orange">
             Legalitas & Identitas
           </p>
           <h2
-            className="mt-3 text-balance text-3xl font-extrabold tracking-tight text-white sm:text-4xl"
+            className="mt-3 whitespace-nowrap text-3xl font-extrabold tracking-tight text-white sm:text-4xl"
             style={{ fontFamily: 'var(--font-heading)' }}
           >
             Data Perusahaan Resmi
           </h2>
-          <p className="mt-4 text-pretty text-base leading-relaxed text-slate-400">
-            Kami beroperasi dengan legalitas penuh dan transparan. Kepercayaan
-            Anda adalah prioritas utama kami.
-          </p>
         </div>
 
         <div ref={contentRef} className="mt-16 grid gap-8 opacity-0 lg:grid-cols-3">
@@ -125,7 +121,7 @@ export default function CompanyData() {
                   >
                     Berbadan Hukum Resmi
                   </p>
-                  <p className="mt-1 text-justify text-sm leading-relaxed text-slate-300">
+                  <p className="mt-1 text-sm leading-relaxed text-slate-300">
                     CV Efata Jaya Truss adalah badan usaha resmi dengan akta notaris,
                     SK Kemenkumham, dan NPWP aktif. Setiap proyek dikerjakan
                     dengan penuh pertanggungjawaban.

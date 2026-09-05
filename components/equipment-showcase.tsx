@@ -9,34 +9,14 @@ gsap.registerPlugin(ScrollTrigger)
 
 const equipment = [
   {
-    name: 'Excavator',
-    description: 'Alat berat serbaguna untuk galian, pengurukan, dan pembersihan lahan proyek.',
+    name: 'Excavator CAT',
+    description: 'Alat berat serbaguna merk Caterpillar (CAT) untuk galian, pengurukan, dan pembersihan lahan proyek.',
     image: '/images/equipment-excavator.png',
-    specs: ['Kapasitas Bucket 0.8 m³', 'Jangkauan Optimal', 'Operator Berpengalaman'],
-  },
-  {
-    name: 'TW500 Sakai',
-    description: 'Vibrating roller untuk pemadatan aspal dan tanah dengan hasil yang merata dan solid.',
-    image: '/images/equipment-roller.png',
-    specs: ['Tandem Vibratory', 'Pemadatan Optimal', 'Untuk Aspal & Tanah'],
-  },
-  {
-    name: 'Towing',
-    description: 'Kendaraan pengangkut alat berat dan material ke lokasi proyek dengan aman.',
-    image: '/images/equipment-towing.png',
-    specs: ['Kapasitas Angkut Besar', 'Flatbed Truck', 'Antar Lokasi Proyek'],
   },
   {
     name: 'Mobil Pick Up',
     description: 'Kendaraan operasional untuk pengangkutan material dan logistik proyek harian.',
     image: '/images/equipment-pickup.png',
-    specs: ['Mobilitas Tinggi', 'Angkut Material', 'Operasional Harian'],
-  },
-  {
-    name: 'Genset',
-    description: 'Generator set portable untuk kebutuhan listrik di lokasi proyek yang belum terjangkau PLN.',
-    image: '/images/equipment-genset.png',
-    specs: ['Diesel Portable', 'Daya Besar', 'Siap Pakai 24 Jam'],
   },
 ]
 
@@ -93,30 +73,25 @@ export default function EquipmentShowcase() {
     >
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         {/* Section Title */}
-        <div ref={titleRef} className="mx-auto max-w-2xl text-center opacity-0">
+        <div ref={titleRef} className="mx-auto max-w-4xl text-center opacity-0">
           <p className="text-sm font-bold uppercase tracking-widest text-brand-orange text-center">
             Armada & Peralatan
           </p>
           <h2
-            className="mt-3 text-balance text-3xl font-extrabold tracking-tight text-black sm:text-4xl"
+            className="mt-3 whitespace-nowrap text-3xl font-extrabold tracking-tight text-black sm:text-4xl"
             style={{ fontFamily: 'var(--font-heading)' }}
           >
             Alat Berat & Kendaraan Operasional
           </h2>
-          <p className="mt-4 text-pretty text-base leading-relaxed text-slate-400">
-            Kami menyediakan layanan penyewaan alat berat dan kendaraan operasional
-            untuk mendukung kelancaran proyek konstruksi Anda.
-          </p>
         </div>
 
         {/* Equipment Grid */}
-        <div className="mt-16 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="mx-auto mt-16 grid max-w-4xl grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-2">
           {equipment.map((item, i) => (
             <div
               key={item.name}
               ref={(el) => { cardsRef.current[i] = el }}
-              className={`group relative overflow-hidden rounded-2xl bg-[#2A3441] opacity-0 shadow-lg transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl ${i >= 3 ? 'lg:col-span-1 sm:col-span-1' : ''
-                }`}
+              className="relative overflow-hidden rounded-2xl bg-[#2A3441] opacity-0 shadow-lg"
             >
               {/* Image */}
               <div className="relative aspect-[4/3] w-full overflow-hidden">
@@ -124,7 +99,7 @@ export default function EquipmentShowcase() {
                   src={item.image}
                   alt={item.name}
                   fill
-                  className="object-cover transition-transform duration-700 ease-out group-hover:scale-110"
+                  className="object-cover"
                   sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-[#2A3441] via-transparent to-transparent" />
@@ -147,18 +122,6 @@ export default function EquipmentShowcase() {
                 <p className="mt-2 text-sm leading-relaxed text-slate-400">
                   {item.description}
                 </p>
-
-                {/* Specs */}
-                <div className="mt-4 flex flex-wrap gap-2">
-                  {item.specs.map((spec) => (
-                    <span
-                      key={spec}
-                      className="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs font-medium text-slate-300"
-                    >
-                      {spec}
-                    </span>
-                  ))}
-                </div>
               </div>
             </div>
           ))}

@@ -5,19 +5,10 @@ import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import Image from 'next/image'
 import Link from 'next/link'
-import { categories, projects, categoryToSlug, type Category } from '@/lib/projects'
+import { ArrowRight } from 'lucide-react'
+import { categories, projects, type Category } from '@/lib/projects'
 
 gsap.registerPlugin(ScrollTrigger)
-
-const categoryButtonLabels: Record<Exclude<Category, 'All'>, string> = {
-  'Aspal': 'Lihat Proyek Aspal',
-  'Talud': 'Lihat Proyek Talud',
-  'Drainase': 'Lihat Proyek Drainase',
-  'Perataan Tanah': 'Lihat Proyek Tanah',
-  'Cor Beton': 'Lihat Proyek Cor Beton',
-  'Rangka Atap': 'Lihat Proyek Atap',
-  'Proyek Lainnya': 'Lihat Proyek Lainnya',
-}
 
 export default function Portfolio() {
   const sectionRef = useRef<HTMLElement>(null)
@@ -101,7 +92,7 @@ export default function Portfolio() {
   const filteredProjects =
     activeCategory === 'All'
       ? projects.slice(0, 9)
-      : projects.filter((p) => p.category === activeCategory).slice(0, 3)
+      : projects.filter((p) => p.category === activeCategory)
 
   return (
     <section
@@ -111,20 +102,16 @@ export default function Portfolio() {
     >
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         {/* Section Title */}
-        <div ref={titleRef} className="mx-auto flex max-w-2xl flex-col items-center text-center opacity-0">
+        <div ref={titleRef} className="mx-auto flex max-w-4xl flex-col items-center text-center opacity-0">
           <p className="text-sm font-bold uppercase tracking-widest text-brand-orange">
             Proyek Terbaru
           </p>
           <h2
-            className="mt-3 text-balance text-3xl font-extrabold tracking-tight text-white sm:text-4xl"
+            className="mt-3 whitespace-nowrap text-3xl font-extrabold tracking-tight text-white sm:text-4xl"
             style={{ fontFamily: 'var(--font-heading)' }}
           >
             Portofolio Proyek Kami
           </h2>
-          <p className="mt-4 text-pretty text-base leading-relaxed text-slate-400">
-            Dokumentasi proyek yang telah kami selesaikan dengan
-            standar kualitas tinggi di berbagai wilayah.
-          </p>
         </div>
 
         {/* Category Filter Tabs */}
@@ -145,47 +132,52 @@ export default function Portfolio() {
           </div>
         </div>
 
-        {/* Project Grid */}
+        {/* Project Grid with consistent min-height */}
         <div
           ref={gridRef}
-          className="mt-12 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3"
+          className="mt-12 grid grid-cols-1 gap-5 content-start sm:grid-cols-2 lg:grid-cols-3 min-h-[480px] sm:min-h-[580px] lg:min-h-[720px]"
         >
           {filteredProjects.map((project) => (
             <div
               key={project.label}
-              className="portfolio-card group relative overflow-hidden rounded-2xl opacity-0"
+              className="portfolio-card relative overflow-hidden rounded-2xl opacity-0"
             >
               <div className="relative aspect-4/3 w-full">
                 <Image
                   src={project.src}
                   alt={project.alt}
                   fill
-                  className="object-cover transition-transform duration-700 ease-out group-hover:scale-105"
+                  className="object-cover"
                   sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                 />
-                {/* Always-visible gradient overlay */}
+                {/* Gradient overlay */}
                 <div className="absolute inset-0 bg-linear-to-t from-black/80 via-black/30 to-transparent" />
                 {/* Content overlay */}
                 <div className="absolute bottom-0 left-0 right-0 p-6">
-                  <p className="mb-1 text-[11px] font-semibold uppercase tracking-widest text-slate-300">
+                  <p className="mb-1 text-[11px] font-semibold uppercase tracking-widest text-brand-orange">
                     {project.type}
                   </p>
                   <h3
-                    className="text-xl font-bold leading-tight text-white"
+                    className="text-xl font-bold leading-tight text-white truncate"
                     style={{ fontFamily: 'var(--font-heading)' }}
                   >
                     {project.label}
                   </h3>
-                  <Link
-                    href={`/portofolio/${categoryToSlug(project.category)}`}
-                    className="mt-4 inline-block rounded-md border border-brand-orange px-5 py-2 text-xs font-bold uppercase tracking-wider text-brand-orange transition-all duration-300 hover:bg-brand-orange hover:text-white"
-                  >
-                    {categoryButtonLabels[project.category]}
-                  </Link>
                 </div>
               </div>
             </div>
           ))}
+        </div>
+
+        {/* Single Portfolio CTA Button */}
+        <div className="mt-14 flex justify-center">
+          <Link
+            href="/portofolio"
+            className="inline-flex items-center gap-3 rounded-xl bg-brand-orange px-8 py-3.5 text-sm font-bold text-white shadow-lg shadow-brand-orange/25 transition-all duration-300 hover:bg-brand-orange-dark hover:shadow-xl hover:shadow-brand-orange/35 hover:-translate-y-0.5 active:scale-95 cursor-pointer"
+          >
+            Lihat Seluruh Portofolio Proyek
+            <ArrowRight className="h-4 w-4" />
+          </Link>
         </div>
       </div>
     </section>

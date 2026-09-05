@@ -103,20 +103,16 @@ export default function CompanyHistory() {
     <section id="sejarah" ref={sectionRef} className="bg-slate-100 py-24 lg:py-32">
       <div className="mx-auto max-w-7xl px-6 lg:px-8 mb-16">
         {/* Section Title */}
-        <div ref={titleRef} className="mx-auto flex max-w-2xl flex-col items-center text-center opacity-0">
+        <div ref={titleRef} className="mx-auto flex max-w-4xl flex-col items-center text-center opacity-0">
           <p className="text-sm font-bold uppercase tracking-widest text-brand-orange">
             Perjalanan Kami
           </p>
           <h2
-            className="mt-3 text-balance text-3xl font-extrabold tracking-tight text-slate-900 sm:text-4xl"
+            className="mt-3 whitespace-nowrap text-3xl font-extrabold tracking-tight text-slate-900 sm:text-4xl"
             style={{ fontFamily: 'var(--font-heading)' }}
           >
             Sejarah Singkat CV Efata Jaya Truss
           </h2>
-          <p className="mt-4 text-pretty text-base leading-relaxed text-slate-500">
-            Perjalanan panjang yang dimulai dari semangat sederhana, kini menjadi
-            kontraktor terpercaya kepercayaan pemerintah dan swasta.
-          </p>
         </div>
       </div>
 
@@ -129,7 +125,7 @@ export default function CompanyHistory() {
           <div
             key={m.year}
             ref={(el) => { itemsRef.current[i] = el }}
-            className="group relative flex w-full items-center justify-center overflow-hidden py-16 lg:py-10 my-3 rounded-3xl shadow-xl shadow-slate-200/50"
+            className="relative flex w-full items-center justify-center overflow-hidden py-16 lg:py-10 my-3 rounded-3xl shadow-xl shadow-slate-200/50"
           >
             {/* Background Image for this specific story row */}
             <div className="absolute inset-0 z-0">
@@ -137,9 +133,9 @@ export default function CompanyHistory() {
                 src={m.image}
                 alt={`Dokumentasi ${m.year}`}
                 fill
-                className="object-cover transition-transform duration-[10s] group-hover:scale-105"
+                className="object-cover"
               />
-              <div className="absolute inset-0 bg-slate-900/30 transition-colors duration-500 group-hover:bg-slate-900/10" />
+              <div className="absolute inset-0 bg-slate-900/30" />
             </div>
 
             {/* Timeline Content */}
@@ -149,7 +145,7 @@ export default function CompanyHistory() {
                 {/* Content Card */}
                 <div className="timeline-content w-full lg:w-[calc(50%-2.5rem)] opacity-0">
                   <div
-                    className={`group/card relative overflow-hidden rounded-2xl border p-8 shadow-lg backdrop-blur-md transition-all duration-300 hover:-translate-y-1 ${m.accent
+                    className={`relative overflow-hidden rounded-2xl border p-8 shadow-lg backdrop-blur-md ${m.accent
                       ? 'border-brand-orange/40 bg-slate-900/60'
                       : 'border-white/10 bg-slate-900/40'
                       }`}
@@ -168,7 +164,7 @@ export default function CompanyHistory() {
                     >
                       {m.title}
                     </h3>
-                    <p className="mt-3 text-justify text-base leading-relaxed text-slate-300">
+                    <p className="mt-3 text-base leading-relaxed text-slate-300">
                       {m.description}
                     </p>
                   </div>

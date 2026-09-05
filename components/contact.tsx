@@ -145,20 +145,16 @@ export default function Contact() {
     >
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         {/* Section Title */}
-        <div className="mx-auto mb-16 flex max-w-2xl flex-col items-center text-center">
+        <div className="mx-auto mb-16 flex max-w-4xl flex-col items-center text-center">
           <p className="text-sm font-bold uppercase tracking-widest text-brand-orange">
             Kontak
           </p>
           <h2
-            className="mt-3 text-balance text-3xl font-extrabold tracking-tight text-slate-900 sm:text-4xl"
+            className="mt-3 whitespace-nowrap text-3xl font-extrabold tracking-tight text-slate-900 sm:text-4xl"
             style={{ fontFamily: 'var(--font-heading)' }}
           >
             Hubungi Kami Sekarang
           </h2>
-          <p className="mt-4 text-pretty text-base leading-relaxed text-slate-500">
-            Konsultasikan kebutuhan proyek aspal Anda. Tim kami siap membantu
-            dengan respon cepat.
-          </p>
         </div>
 
         <div className="flex flex-col gap-12 lg:flex-row">

@@ -95,20 +95,16 @@ export default function WhyChooseUs() {
 
       <div className="relative mx-auto max-w-7xl px-6 lg:px-8">
         {/* Section Title */}
-        <div ref={titleRef} className="mx-auto flex max-w-2xl flex-col items-center text-center opacity-0">
+        <div ref={titleRef} className="mx-auto flex max-w-4xl flex-col items-center text-center opacity-0">
           <p className="text-sm font-bold uppercase tracking-widest text-brand-orange">
             Keunggulan Kami
           </p>
           <h2
-            className="mt-3 text-balance text-3xl font-extrabold tracking-tight text-black sm:text-4xl"
+            className="mt-3 whitespace-nowrap text-3xl font-extrabold tracking-tight text-black sm:text-4xl"
             style={{ fontFamily: 'var(--font-heading)' }}
           >
             Mengapa Memilih Efata Jaya?
           </h2>
-          <p className="mt-4 text-pretty text-base leading-relaxed text-slate-400">
-            Kami berkomitmen memberikan yang terbaik dalam setiap aspek layanan
-            konstruksi aspal dan infrastruktur jalan.
-          </p>
         </div>
 
         {/* Benefits Grid */}
@@ -119,7 +115,7 @@ export default function WhyChooseUs() {
               <div
                 key={benefit.title}
                 ref={(el) => { cardsRef.current[i] = el }}
-                className="group rounded-2xl border border-white/10 bg-black/5 p-7 opacity-0 backdrop-blur-sm transition-all duration-300 hover:border-slate-300 hover:bg-orange-400/20"
+                className="rounded-2xl border border-white/10 bg-black/5 p-7 opacity-0 backdrop-blur-sm"
               >
                 <div className="mb-5 flex h-12 w-12 items-center justify-center rounded-xl bg-brand-orange shadow-lg shadow-brand-orange/20">
                   <Icon className="h-6 w-6 text-white" strokeWidth={1.75} />
@@ -130,7 +126,7 @@ export default function WhyChooseUs() {
                 >
                   {benefit.title}
                 </h3>
-                <p className="mt-2 text-justify text-sm leading-relaxed text-slate-500">
+                <p className="mt-2 text-sm leading-relaxed text-slate-500">
                   {benefit.description}
                 </p>
               </div>

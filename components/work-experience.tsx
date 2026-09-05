@@ -104,12 +104,12 @@ export default function WorkExperience() {
     >
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         {/* Section Title */}
-        <div ref={titleRef} className="mx-auto max-w-2xl text-center opacity-0">
+        <div ref={titleRef} className="mx-auto max-w-4xl text-center opacity-0">
           <p className="text-sm font-bold uppercase tracking-widest text-brand-orange">
             Pengalaman Kerja
           </p>
           <h2
-            className="mt-3 text-balance text-3xl font-extrabold tracking-tight text-slate-900 sm:text-4xl"
+            className="mt-3 whitespace-nowrap text-3xl font-extrabold tracking-tight text-slate-900 sm:text-4xl"
             style={{ fontFamily: 'var(--font-heading)' }}
           >
             Kami Ahli di Berbagai Bidang Konstruksi
@@ -128,12 +128,12 @@ export default function WorkExperience() {
               <div
                 key={exp.title}
                 ref={(el) => { cardsRef.current[i] = el }}
-                className="group relative rounded-2xl border border-slate-100 bg-slate-50 p-7 opacity-0 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-amber-300 hover:bg-amber-50/40 hover:shadow-lg"
+                className="relative rounded-2xl border border-slate-100 bg-slate-50 p-7 opacity-0 shadow-sm"
               >
                 {/* Icon */}
-                <div className="mb-5 flex h-12 w-12 items-center justify-center rounded-xl bg-brand-orange/10 transition-colors group-hover:bg-brand-orange group-hover:[&_svg]:text-white">
+                <div className="mb-5 flex h-12 w-12 items-center justify-center rounded-xl bg-brand-orange/10">
                   <Icon
-                    className="h-6 w-6 text-brand-orange transition-colors"
+                    className="h-6 w-6 text-brand-orange"
                     strokeWidth={1.75}
                   />
                 </div>
@@ -147,7 +147,7 @@ export default function WorkExperience() {
                 </h3>
 
                 {/* Description */}
-                <p className="mt-2 text-justify text-sm leading-relaxed text-slate-500">
+                <p className="mt-2 text-sm leading-relaxed text-slate-500">
                   {exp.description}
                 </p>
 

@@ -168,12 +168,12 @@ export default function PortfolioCategory() {
 
       {/* Title Section */}
       <div className="mx-auto max-w-7xl px-6 pt-16 pb-8 lg:px-8">
-        <div ref={titleRef} className="mx-auto flex max-w-2xl flex-col items-center text-center opacity-0">
+        <div ref={titleRef} className="mx-auto flex max-w-4xl flex-col items-center text-center opacity-0">
           <p className="text-sm font-bold uppercase tracking-widest text-brand-orange">
             Portofolio
           </p>
           <h1
-            className="mt-3 text-3xl font-extrabold tracking-tight text-white sm:text-5xl"
+            className="mt-3 whitespace-nowrap text-2xl font-extrabold tracking-tight text-white sm:text-4xl lg:text-5xl"
             style={{ fontFamily: 'var(--font-heading)' }}
           >
             {data.title}
@@ -231,7 +231,7 @@ export default function PortfolioCategory() {
                   </div>
                 </div>
                 <div className="absolute bottom-0 left-0 right-0 bg-linear-to-t from-black/60 to-transparent p-4">
-                  <p className="text-sm font-medium text-white">{image.alt}</p>
+                  <p className="text-sm font-medium text-white truncate">{image.alt}</p>
                 </div>
               </div>
             ))}
@@ -328,7 +328,7 @@ export default function PortfolioCategory() {
                         </div>
                       </div>
                       <div className="absolute bottom-0 left-0 right-0 bg-linear-to-t from-black/60 to-transparent p-4">
-                        <p className="text-sm font-medium text-white">{image.alt}</p>
+                        <p className="text-sm font-medium text-white truncate">{image.alt}</p>
                       </div>
                     </div>
                   ))}
