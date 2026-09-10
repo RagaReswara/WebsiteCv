@@ -11,6 +11,7 @@ const EquipmentShowcase = dynamic(() => import('@/components/equipment-showcase'
 const Portfolio = dynamic(() => import('@/components/portfolio'))
 const WhyChooseUs = dynamic(() => import('@/components/why-choose-us'))
 const CompanyData = dynamic(() => import('@/components/company-data'))
+const EfataGroup = dynamic(() => import('@/components/efata-group'))
 const Contact = dynamic(() => import('@/components/contact'))
 const Footer = dynamic(() => import('@/components/footer'))
 const WhatsAppButton = dynamic(() => import('@/components/whatsapp-button'))
@@ -29,6 +30,7 @@ export default function Home() {
       <EquipmentShowcase />
       <WhyChooseUs />
       <CompanyData />
+      <EfataGroup />
       <Contact />
       <SectionDivider fromColor="#ffffff" toColor="#f1f5f9" />
       <Footer />

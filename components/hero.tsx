@@ -59,13 +59,13 @@ export default function Hero() {
           '-=0.5'
         )
         .fromTo(
-          ctaRef.current,
+          statsRef.current,
           { y: 20, opacity: 0 },
           { y: 0, opacity: 1, duration: 0.8 },
           '-=0.4'
         )
         .fromTo(
-          statsRef.current,
+          ctaRef.current,
           { y: 20, opacity: 0 },
           { y: 0, opacity: 1, duration: 0.8 },
           '-=0.3'

@@ -161,7 +161,7 @@ export default function PortfolioCategory() {
             Kembali ke Beranda
           </Link>
           <Link href="/" className="text-sm font-bold text-white">
-            CV Efata Jaya Truss
+            Efata Group
           </Link>
         </div>
       </div>

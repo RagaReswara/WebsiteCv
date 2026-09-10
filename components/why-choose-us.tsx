@@ -103,7 +103,7 @@ export default function WhyChooseUs() {
             className="mt-3 whitespace-nowrap text-3xl font-extrabold tracking-tight text-black sm:text-4xl"
             style={{ fontFamily: 'var(--font-heading)' }}
           >
-            Mengapa Memilih Efata Jaya?
+            Mengapa Memilih Efata Group?
           </h2>
         </div>
 
@@ -126,7 +126,7 @@ export default function WhyChooseUs() {
                 >
                   {benefit.title}
                 </h3>
-                <p className="mt-2 text-sm leading-relaxed text-slate-500">
+                <p className="mt-2 text-left text-sm leading-relaxed text-slate-500">
                   {benefit.description}
                 </p>
               </div>

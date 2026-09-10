@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 160" width="100%" height="100%">
+  <defs>
+    <linearGradient id="reswara-grad-primary" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#EA580C" />
+      <stop offset="100%" stop-color="#C2410C" />
+    </linearGradient>
+    <linearGradient id="reswara-grad-secondary" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1E293B" />
+      <stop offset="100%" stop-color="#0F172A" />
+    </linearGradient>
+    <linearGradient id="reswara-grad-accent" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#F97316" />
+      <stop offset="100%" stop-color="#FB923C" />
+    </linearGradient>
+  </defs>
+
+  <!-- Group: Emblem Mark -->
+  <g transform="translate(20, 20)">
+    <!-- Isometric Cube / Architectural Polygon (Hexagonal Pillar) -->
+    <!-- Left Face -->
+    <path d="M 60 10 L 15 36 L 15 88 L 60 62 Z" fill="url(#reswara-grad-secondary)" />
+    <!-- Right Face -->
+    <path d="M 60 62 L 105 88 L 105 36 L 60 10 Z" fill="url(#reswara-grad-primary)" />
+    <!-- Top Face -->
+    <path d="M 60 10 L 105 36 L 60 62 L 15 36 Z" fill="url(#reswara-grad-accent)" opacity="0.9" />
+    
+    <!-- Stylized Dynamic 'R' inside emblem -->
+    <path d="M 45 42 L 75 42 Q 85 42 85 52 Q 85 62 75 62 L 60 62 L 80 82" stroke="#FFFFFF" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round" fill="none" />
+    <path d="M 60 42 L 60 82" stroke="#FFFFFF" stroke-width="4.5" stroke-linecap="round" fill="none" />
+    
+    <!-- Accent Spark/Corner -->
+    <circle cx="60" cy="10" r="3" fill="#FFFFFF" />
+  </g>
+
+  <!-- Typography -->
+  <!-- "PT" badge / text -->
+  <text x="155" y="62" font-family="system-ui, -apple-system, sans-serif" font-weight="900" font-size="28" fill="#0F172A" letter-spacing="1.5">
+    PT RESWARA
+  </text>
+  
+  <!-- "JAYA SEMESTA" text -->
+  <text x="155" y="94" font-family="system-ui, -apple-system, sans-serif" font-weight="800" font-size="22" fill="#EA580C" letter-spacing="3.5">
+    JAYA SEMESTA
+  </text>
+  
+  <!-- Horizontal divider line -->
+  <line x1="155" y1="106" x2="440" y2="106" stroke="#E2E8F0" stroke-width="2" />
+  
+  <!-- Corporate Subtitle -->
+  <text x="155" y="122" font-family="system-ui, -apple-system, sans-serif" font-weight="600" font-size="10" fill="#64748B" letter-spacing="4">
+    GENERAL TRADING & SERVICES
+  </text>
+</svg>

@@ -72,7 +72,7 @@ export default function About() {
               Mitra Konstruksi Terpercaya untuk Proyek Anda
             </h2>
             <p className="mt-6 text-base leading-relaxed text-slate-600">
-              <strong>CV Efata Jaya Truss</strong> merupakan perusahaan konstruksi terpercaya di Sleman, Yogyakarta, yang bergerak di bidang <em>pengadaan barang dan jasa konstruksi</em>. Kami menawarkan kerjasama kepada berbagai perusahaan maupun instansi pemerintah berdasarkan bidang keahlian kami yang telah teruji.
+              <strong>Efata Group</strong> merupakan perusahaan konstruksi terpercaya di Sleman, Yogyakarta, yang bergerak di bidang <em>pengadaan barang dan jasa konstruksi</em>. Kami menawarkan kerjasama kepada berbagai perusahaan maupun instansi pemerintah berdasarkan bidang keahlian kami yang telah teruji.
             </p>
             <p className="mt-4 text-base leading-relaxed text-slate-600">
               Berpengalaman dalam pembangunan rumah huni, gudang, gedung pertemuan, <strong>jalan aspal</strong>, jalan cor beton, talud, jembatan, hingga pemasangan konstruksi atap baja dan roofing kami hadir sebagai <strong>solusi satu atap</strong> untuk semua kebutuhan konstruksi Anda. Percayakan proyek Anda kepada kami.
@@ -83,7 +83,7 @@ export default function About() {
               <div className="rounded-xl bg-amber-50/60 px-6 py-5">
                 <p className="text-sm font-semibold text-slate-900">Visi Kami</p>
                 <p className="mt-1 text-sm leading-relaxed text-slate-600">
-                  Menjadi CV kontraktor dan perdagangan umum terbaik di Yogyakarta,
+                  Menjadi grup kontraktor dan perdagangan umum terbaik di Yogyakarta,
                   dengan mengutamakan kepuasan pekerja dan pelanggan melalui hasil
                   kerja berkualitas tinggi.
                 </p>
@@ -112,7 +112,7 @@ export default function About() {
             <div className="relative overflow-hidden rounded-2xl">
               <Image
                 src="/images/about-bg.jpg"
-                alt="Proyek pengaspalan CV Efata Jaya Truss"
+                alt="Proyek pengaspalan Efata Group"
                 width={640}
                 height={480}
                 className="h-auto w-full object-cover"

@@ -157,7 +157,7 @@ export default function Testimonials() {
             </div>
 
             {/* Content */}
-            <p className="text-justify text-lg leading-relaxed text-slate-600">
+            <p className="text-left text-lg leading-relaxed text-slate-600">
               {`"${t.content}"`}
             </p>
 

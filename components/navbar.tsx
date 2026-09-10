@@ -18,10 +18,8 @@ const navLinks = [
 ]
 
 export default function Navbar() {
-  const [scrolled, setScrolled] = useState(false)
   const [mobileOpen, setMobileOpen] = useState(false)
   const [activeSection, setActiveSection] = useState('beranda')
-  const headerRef = useRef<HTMLElement>(null)
   const mobileMenuRef = useRef<HTMLDivElement>(null)
   const mobileLinksRef = useRef<HTMLUListElement>(null)
   const underlineRefs = useRef<Map<string, HTMLSpanElement>>(new Map())
@@ -47,33 +45,6 @@ export default function Navbar() {
     setTimeout(() => clearInterval(interval), 3000)
 
     return () => clearInterval(interval)
-  }, [])
-
-  // Navbar background on scroll via GSAP ScrollTrigger
-  useEffect(() => {
-    const header = headerRef.current
-    if (!header) return
-
-    ScrollTrigger.create({
-      trigger: document.body,
-      start: 'top -40px',
-      onToggle: (self) => {
-        setScrolled(self.isActive)
-        gsap.to(header, {
-          backgroundColor: self.isActive
-            ? 'rgba(255,255,255,0.97)'
-            : 'rgba(255,255,255,0)',
-          backdropFilter: self.isActive ? 'blur(16px)' : 'blur(0px)',
-          boxShadow: self.isActive
-            ? '0 1px 3px 0 rgba(0,0,0,0.08)'
-            : '0 0 0 0 rgba(0,0,0,0)',
-          duration: 0.4,
-          ease: 'power2.out',
-        })
-      },
-    })
-
-    return () => ScrollTrigger.killAll()
   }, [])
 
   // Scroll spy with ScrollTrigger
@@ -227,7 +198,7 @@ export default function Navbar() {
 
   return (
     <>
-      <header ref={headerRef} className="fixed top-0 left-0 right-0 z-50">
+      <header className="fixed top-0 left-0 right-0 z-50 border-b border-slate-100 bg-white/95 backdrop-blur-md shadow-xs">
       <nav className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4 lg:px-8">
         {/* Logo */}
         <a
@@ -240,7 +211,7 @@ export default function Navbar() {
         >
           <Image
             src="/images/Logo-CV-Efata.png"
-            alt="Logo CV Efata Jaya Truss"
+            alt="Logo Efata Group"
             width={56}
             height={56}
             className="h-16 w-40 pr-1 pb-3.5 object-contain"
@@ -250,9 +221,9 @@ export default function Navbar() {
               className="text-base font-extrabold tracking-tight text-slate-900"
               style={{ fontFamily: 'var(--font-heading)' }}
             >
-              Efata Jaya Truss
+              Efata Group
             </span>
-            <span className="text-[10px] font-medium uppercase tracking-widest text-slate-400">
+            <span className="text-[10px] font-medium uppercase tracking-widest text-slate-500">
               Contractor & Trading
             </span>
           </div>
@@ -272,8 +243,8 @@ export default function Navbar() {
                     handleNavClick(link.href, e.currentTarget)
                   }}
                   className={`nav-link relative block px-4 py-2 text-sm font-medium transition-colors duration-200 ${isActive
-                    ? 'text-brand-orange'
-                    : 'text-black hover:text-slate-400'
+                    ? 'text-brand-orange font-semibold'
+                    : 'text-slate-700 hover:text-brand-orange'
                     }`}
                 >
                   {link.label}

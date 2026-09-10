@@ -13,7 +13,7 @@ const milestones = [
     year: 'Awal Berdiri',
     title: 'Lahir dari Semangat Membangun',
     description:
-      'CV Efata Jaya Truss bermula dari usaha perorangan di bidang konstruksi rangka atap dari bambu dan bangunan bambu menjadi cikal bakal semangat membangun yang tak pernah padam dan terus berkembang hingga hari ini.',
+      'Efata Group bermula dari usaha perorangan di bidang konstruksi rangka atap dari bambu dan bangunan bambu menjadi cikal bakal semangat membangun yang tak pernah padam dan terus berkembang hingga hari ini.',
     image: '/images/rangka-proses-1.jpg',
     accent: true,
   },
@@ -43,9 +43,9 @@ const milestones = [
   },
   {
     year: '2020',
-    title: 'Resmi Berbadan Hukum sebagai CV',
+    title: 'Resmi Berbadan Hukum',
     description:
-      'Dengan Akta Pendirian No. 13 tanggal 30 Juni 2020 dan SK Kemenkumham No. AHU-0038124-AH.01.15, CV Efata Jaya Truss resmi berbadan hukum. Fondasi legal yang kuat untuk melayani proyek yang lebih besar dan lebih ambisius.',
+      'Dengan Akta Pendirian No. 13 tanggal 30 Juni 2020 dan SK Kemenkumham No. AHU-0038124-AH.01.15, Efata Group resmi berbadan hukum. Fondasi legal yang kuat untuk melayani proyek yang lebih besar dan lebih ambisius.',
     image: '/images/project-8.jpg',
     accent: true,
   },
@@ -111,7 +111,7 @@ export default function CompanyHistory() {
             className="mt-3 whitespace-nowrap text-3xl font-extrabold tracking-tight text-slate-900 sm:text-4xl"
             style={{ fontFamily: 'var(--font-heading)' }}
           >
-            Sejarah Singkat CV Efata Jaya Truss
+            Sejarah Singkat Efata Group
           </h2>
         </div>
       </div>
@@ -172,12 +172,7 @@ export default function CompanyHistory() {
 
                 {/* Center dot */}
                 <div className="hidden lg:flex absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 items-center justify-center w-10 h-10">
-                  <div
-                    className={`flex h-10 w-10 items-center justify-center rounded-full shadow-lg ring-4 ring-slate-900/50 ${m.accent
-                      ? 'bg-brand-orange text-white'
-                      : 'bg-slate-800 text-brand-orange border border-white/20'
-                      }`}
-                  >
+                  <div className="flex h-10 w-10 items-center justify-center rounded-full bg-brand-orange text-white shadow-lg ring-4 ring-slate-900/50">
                     <Milestone className="h-4 w-4" />
                   </div>
                 </div>

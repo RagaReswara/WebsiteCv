@@ -63,7 +63,7 @@ export default function Footer() {
             <div className="flex items-center gap-2">
               <Image
                 src="/images/Logo-CV-Efata.png"
-                alt="Logo CV Efata Jaya Truss"
+                alt="Logo Efata Group"
                 width={32}
                 height={32}
                 className="h-24 w-60 object-contain"
@@ -72,7 +72,7 @@ export default function Footer() {
                 className="text-lg font-extrabold text-black"
                 style={{ fontFamily: 'var(--font-heading)' }}
               >
-                Efata Jaya Truss
+                Efata Group
               </span> */}
             </div>
             <p className="mt-4 max-w-xs text-sm leading-relaxed text-slate-400">
@@ -172,7 +172,7 @@ export default function Footer() {
         {/* Bottom Bar */}
         <div className="mt-16 flex flex-col items-center justify-between gap-4 border-t border-black/10 pt-8 sm:flex-row">
           <p className="text-xs text-slate-400">
-            {'© 2026 CV Efata Jaya Truss. Seluruh hak dilindungi.'}
+            {'© 2026 Efata Group. Seluruh hak dilindungi.'}
           </p>
           <a
             href="https://wa.me/6282227196772"

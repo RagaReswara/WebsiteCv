@@ -103,7 +103,4 @@
   body {
     @apply bg-white text-slate-900;
   }
-  p {
-    text-align: justify;
-  }
 }

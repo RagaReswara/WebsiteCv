@@ -7,11 +7,11 @@ const inter = Inter({ subsets: ['latin'] })
 const plusJakarta = Plus_Jakarta_Sans({ subsets: ['latin'], variable: '--font-heading' })
 
 export const metadata = {
-  title: 'CV Efata Jaya Truss — Kontraktor Aspal Terpercaya di Yogyakarta',
+  title: 'Efata Group — Kontraktor Aspal Terpercaya di Yogyakarta',
   description:
-    'CV Efata Jaya Truss adalah kontraktor aspal terpercaya di Sleman, Yogyakarta. Spesialis pengaspalan jalan, konstruksi infrastruktur, dan pemeliharaan jalan untuk proyek pemerintah maupun swasta.',
+    'Efata Group adalah kontraktor aspal terpercaya di Sleman, Yogyakarta. Spesialis pengaspalan jalan, konstruksi infrastruktur, dan pemeliharaan jalan untuk proyek pemerintah maupun swasta.',
   openGraph: {
-    title: 'CV Efata Jaya Truss — Kontraktor Aspal Terpercaya',
+    title: 'Efata Group — Kontraktor Aspal Terpercaya',
     description:
       'Spesialis pengaspalan jalan & konstruksi infrastruktur di Yogyakarta. 15+ tahun pengalaman.',
     locale: 'id_ID',

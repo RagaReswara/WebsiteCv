@@ -86,7 +86,7 @@ export default function Contact() {
 
     const waNumber = '6282227196772'
     const text = [
-      `Halo CV Efata Jaya Truss,`,
+      `Halo Efata Group,`,
       ``,
       `Perkenalkan, saya ${formData.name} ingin mengirimkan pesan:`,
       ``,
@@ -375,7 +375,7 @@ export default function Contact() {
                 allowFullScreen
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
-                title="Lokasi CV Efata Jaya Truss - Sleman, Yogyakarta"
+                title="Lokasi Efata Group - Sleman, Yogyakarta"
                 className="min-h-70 w-full"
               />
             </div>

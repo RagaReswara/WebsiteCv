@@ -8,7 +8,7 @@ import { Building, FileText, TrendingUp } from 'lucide-react'
 gsap.registerPlugin(ScrollTrigger)
 
 const companyInfo = [
-  { label: 'Nama Perusahaan', value: 'CV Efata Jaya Truss' },
+  { label: 'Nama Perusahaan', value: 'Efata Group' },
   { label: 'Alamat', value: 'JL Agrowisata, Klelen Rt 04, Trimulyo, Kec. Sleman, Yogyakarta 55513' },
   { label: 'Nomor Telepon', value: '0821 3890 6449 / 0822 2719 6772' },
   { label: 'Email', value: 'efatajaya58@gmail.com' },
@@ -121,8 +121,8 @@ export default function CompanyData() {
                   >
                     Berbadan Hukum Resmi
                   </p>
-                  <p className="mt-1 text-sm leading-relaxed text-slate-300">
-                    CV Efata Jaya Truss adalah badan usaha resmi dengan akta notaris,
+                  <p className="mt-1 text-left text-sm leading-relaxed text-slate-300">
+                    Efata Group adalah badan usaha resmi dengan akta notaris,
                     SK Kemenkumham, dan NPWP aktif. Setiap proyek dikerjakan
                     dengan penuh pertanggungjawaban.
                   </p>
