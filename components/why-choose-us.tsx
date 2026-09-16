@@ -22,9 +22,9 @@ const benefits = [
   },
   {
     icon: Users,
-    title: 'Tenaga Ahli',
+    title: 'Tenaga Berpengalaman',
     description:
-      'Didukung oleh tim profesional dan pekerja berpengalaman di bidang konstruksi aspal untuk menjamin hasil yang rapi dan tahan lama.',
+      'Didukung oleh tenaga kerja terampil dan berpengalaman di bidang konstruksi aspal untuk menjamin hasil yang rapi dan tahan lama.',
   },
   {
     icon: Headphones,
